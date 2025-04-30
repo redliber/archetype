@@ -1,0 +1,58 @@
+media : "src/content/media"
+content:
+  - name : character
+    label : Character
+    type : collection
+    path : src/content/character
+    filename : '{primary}.md'
+    view :
+      primary : name
+    fields :
+      - name : name
+        label : Name
+        type : string
+      - name : screenplay
+        label : Screenplay
+        type : string
+      - name : age
+        label : Age
+        type : number
+      - name : description
+        label : Description
+        type : rich-text
+      - name : profession
+        label : Profession
+        type : string
+      - name : wants
+        label : Wants
+        type : string
+      - name : needs
+        label : Needs
+        type : string
+      - name : role
+        label : Role
+        type : select
+        options :
+          values : [Main Protagonist, Main Antagonist, Protagonist/Antagonist, Protagonist, Antagonist, Side Character]
+  - name : screenplay
+    label : Screenplay
+    type : collection
+    path : src/content/screenplay
+    filename : '{primary}.md'
+    view :
+      primary : title
+    fields :
+      - name : title
+        label : Title
+        type : string
+      - name : premise
+        label : Premise
+        type : string
+      - name : genre
+        label : Genre
+        type : select
+        options :
+          values : [Philosophy, Psychology, Crime, History, Sci-Fi, Politics, Alchemy, Religious, Legends, Young Adult, Action, Espionage, Drama, Family, Coming-of-age, Biography, Horror, Romance, Fantasy, Zombie, Thriller]
+      - name : synopsis
+        label : Synopsis
+        type : rich-text
