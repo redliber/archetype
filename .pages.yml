@@ -61,7 +61,7 @@ content:
     label : Affiliation
     type : collection
     path : src/content/affiliation
-    filename : '{primary}'
+    filename : '{primary}.mdx'
     view :
       primary : business
     fields :
