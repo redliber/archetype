@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function SideBar ({slug} : {slug: string}) {
-    const content = ['premise', 'genres', 'synopsis', 'strengths', 'characters']
+    const content = ['premise', 'synopsis', 'strengths', 'characters']
 
     const [activeSection, setActiveSection] = useState('');
 

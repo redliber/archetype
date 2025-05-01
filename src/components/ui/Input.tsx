@@ -4,7 +4,7 @@ import { px, useAnimate } from "framer-motion"
 import { useEffect, useState, type ChangeEvent } from "react"
 import { CornerDownLeft } from 'lucide-react'
 
-export default function Input() {
+export default function Input({siteUrl}: {siteUrl: string}) {
     const [scope, animate] = useAnimate()
     const [arrowScope, arrowAnimate] = useAnimate()
     const [useVal, setVal] = useState('')
@@ -78,6 +78,14 @@ export default function Input() {
             })
         }
     }
+
+    function handleKeyDown(e:any) {
+        const target = e.target.value.trim().toLowerCase()
+        if (e.key === "Enter" && e.target.value.trim()) {
+            const absoluteUrl = new URL(`archetype/affiliation/${encodeURIComponent(target)}`, siteUrl).toString();
+            window.location.href = absoluteUrl;
+          }
+    }
     
     return (
         <>
@@ -88,6 +96,7 @@ export default function Input() {
                     onMouseLeave={() => handleLeave()}
                     onFocus={() => handleFocus()}
                     onChange={(e) => handleChange(e)}
+                    onKeyDown={handleKeyDown}
                     className="
                         min-w-full h-[3.25rem] 
                         text-center text-3xl

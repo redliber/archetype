@@ -6,10 +6,12 @@ import Span from "./Span"
 export default function Hero({text, className}: {text: string, className?: string}) {
     const textArr = text.split('')
     const fontSettings = className ? className : ` font-bold text-8xl `
+
     return (
-        <div className={` 
+        <div
+            className={`
             font-heading  
-            flex flex-row text-center ` + fontSettings}>
+            flex flex-wrap text-center ` + fontSettings}>
             {
                 textArr.map((item, index) => {
                     return (

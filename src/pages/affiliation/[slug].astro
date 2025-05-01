@@ -1,13 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import Hero from '../../components/ui/Hero';
-import Caption from '../../components/ui/Caption';
 
 import '../../assets/global.css'
-import Title from '../../components/sections/Title';
-import SideBar from '../../components/sections/SideBar';
-import CaptionAnim from '../../components/ui/CaptionAnim';
+import Hero from '../../components/ui/Hero';
+import Card from '../../components/ui/Card';
+import SectionFadeIn from '../../components/animation/SectionFadeIn';
 
 export async function getStaticPaths() {
     const affiliations = await getCollection('affiliation')
@@ -22,15 +20,47 @@ export async function getStaticPaths() {
     }))
 }
 
-
 const { affiliation } = Astro.props;
 const { slug } = Astro.params;
-const { title, screenplay} = affiliation
+const { title, screenplay } = affiliation
+
+const screenplayArr = await getCollection('screenplay')
+const screenplayArrFiltered = screenplayArr.filter(item => screenplay.includes(item.data.title))
+
+const screenplayArrMapped = screenplayArrFiltered.map((item) => {
+    return {...item.data, slug:item.slug}
+})
+
+const siteOrigin = Astro.url.origin
 
 ---
 
 <Layout>
-	<div class="w-[100vw] h-[100vh] flex flex-row items-start">
-        <p class="text-3xl">{JSON.stringify(screenplay)}</p>
+	<div class="w-[100vw] h-[100vh] flex flex-col items-center p-10 overflow-hidden">
+        <SectionFadeIn delay={0.5} client:load>
+            <Hero client:load text={title} className='text-xl font-black'/>
+        </SectionFadeIn>
+        <div class="flex flex-wrap gap-12 my-32">
+            {
+                screenplayArrMapped && screenplayArrMapped.map((item, index) => {
+                    const newPath = `archetype/tale/${item.slug}`
+                    const absoluteUrl = new URL(newPath, siteOrigin).toString();
+
+                    return (
+                        <SectionFadeIn
+                            duration={2}
+                            delay={1.25} 
+                            client:load>
+                            <Card client:load
+                                link={absoluteUrl}
+                                index={index}
+                                title={item.title}
+                                genres={item.genre}
+                                />
+                        </SectionFadeIn>
+                    )
+                })
+            }
+        </div>
 	</div>
 </Layout>

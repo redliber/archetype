@@ -5,11 +5,12 @@ import Input from '../components/ui/Input';
 import Layout from '../layouts/Layout.astro';
 
 const screenplays = await getCollection('screenplay')
+const siteOrigin = Astro.url.origin
 ---
 
 <Layout>
 	<div class="w-[100vw] h-[100vh] flex flex-col items-center justify-center p-10">
 		<Hero client:load text='archetype'/>
-		<Input client:load />
+		<Input client:load siteUrl={siteOrigin}/>
 	</div>
 </Layout>

@@ -8,6 +8,7 @@ import '../../assets/global.css'
 import Title from '../../components/sections/Title';
 import SideBar from '../../components/sections/SideBar';
 import CaptionAnim from '../../components/ui/CaptionAnim';
+import SectionFadeIn from '../../components/animation/SectionFadeIn';
 
 export async function getStaticPaths() {
     const screenplays = await getCollection('screenplay')
@@ -29,58 +30,70 @@ const { screenplay } = Astro.props;
 const { slug } = Astro.params;
 const { title, premise, genre, synopsis} = screenplay
 
+console.log('Genres -->  ', genre)
+
 ---
 
 <Layout>
-	<div class="w-[100vw] h-[100vh] flex flex-row items-start">
-        <div class="w-[15%] h-full ">
-            <div class="fixed w-[15%] top-0 bg-liber-red text-liber-beige h-full flex flex-col justify-between">
-                <div class="p-10 w-full text-right">
-                    <a href="/archetype" class="font-heading font-black hover:text-liber-red-2 transition-all duration-100 ease-in-out ">archetype</a>
+    <SectionFadeIn client:load duration={3} delay={0.5}>
+        <div class="w-[100vw] h-[100vh] flex flex-row items-start">
+            <div class="w-[15%] h-full ">
+                <SectionFadeIn client:load duration={3} delay={4}>
+                    <div class="fixed w-[15%] top-0 bg-liber-red text-liber-beige h-full flex flex-col justify-between">
+                        <div class="p-10 w-full text-right">
+                            <a href="/archetype" class="font-heading font-black hover:text-liber-red-2 transition-all duration-100 ease-in-out ">archetype</a>
+                        </div>
+                        <SideBar slug={slug} client:load />
+                    </div>
+                </SectionFadeIn>
+            </div>
+
+            <div class="w-[85%] p-20">
+                <SectionFadeIn client:load delay={2.5} duration={3}>
+                    <div class="flex flex-col justify-end">
+                        {
+                            genre.map((item) => (
+                                <p class="text-liber-red font-black text-2xl">
+                                    {item}
+                                </p>
+                            ))
+                        }
+                    </div>
+                </SectionFadeIn>
+                <Title client:load title={title}/>
+                <div class="flex flex-col gap-12 my-80">
+                    <div class="py-40">
+                        <div 
+                            id="premise"
+                            data-section-id="premise"
+                            >
+                            <Caption client:load text={premise}/>
+                            <!-- <SectionFadeIn client:load duration={4} delay={2}>
+                            </SectionFadeIn> -->
+                        </div>
+                    </div>
+    
+    
+                    <div class="py-40">
+                        <div 
+                            id="synopsis"
+                            data-section-id="synopsis"
+                            >
+                            <Caption client:load text={premise}/>
+                        </div>
+                    </div>
+    
+                    <div class="py-40">
+                        <div 
+                            id="strengths"
+                            data-section-id="strengths"
+                            >
+                            <Caption client:load text={premise}/>
+                        </div>
+                    </div>
+    
                 </div>
-                <SideBar slug={slug} client:load />
             </div>
         </div>
-        <div class="w-[85%] p-20">
-            <Title client:load title={title}/>
-            <div class="flex flex-col gap-12 my-80 pr-24">
-                <div class="py-40">
-                    <div 
-                        id="premise"
-                        data-section-id="premise"
-                        >
-                        <Caption client:load text={premise}/>
-                    </div>
-                </div>
-
-                <div class="py-40">
-                    <div 
-                        id="genres"
-                        data-section-id="genres"
-                        >
-                        <Caption client:load text={premise}/>
-                    </div>
-                </div>
-
-                <div class="py-40">
-                    <div 
-                        id="synopsis"
-                        data-section-id="synopsis"
-                        >
-                        <Caption client:load text={premise}/>
-                    </div>
-                </div>
-
-                <div class="py-40">
-                    <div 
-                        id="strengths"
-                        data-section-id="strengths"
-                        >
-                        <Caption client:load text={premise}/>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-	</div>
+    </SectionFadeIn>
 </Layout>
