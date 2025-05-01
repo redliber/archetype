@@ -61,9 +61,12 @@ content:
     label : Affiliation
     type : collection
     path : src/content/affiliation
+    filename : "{primary}.md"
+    view :
+      primary : business
     fields :
       - name : business
-        label : Name
+        label : Business
         type : string
       - name : screenplay
         label : Screenplay
