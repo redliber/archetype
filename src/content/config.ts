@@ -5,6 +5,7 @@ const screenplayCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     premise: z.string(),
+    cover: z.string(),
     genre: z.array(z.string()),
     synopsis: z.string(),
   }),

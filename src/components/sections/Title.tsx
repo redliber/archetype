@@ -47,7 +47,7 @@ export default function Title({title}: {title: string}) {
             <div className="h-[25vh]"></div>
             <div
                 ref={introScope} 
-                className="sticky top-0 py-12 justify-items-end"
+                className="sticky top-0 py-12 justify-items-end px-24"
                 style={{
                     opacity: 0,
                     filter: 'blur(30px)'
@@ -63,7 +63,7 @@ export default function Title({title}: {title: string}) {
                     <Hero className={` font-extrabold text-8xl `} text={title}/>
                 </div>
             </div>
-            <div className="h-[25vh]"></div>
+            <div className="h-[50vh]"></div>
         </>
     )
 }

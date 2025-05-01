@@ -16,7 +16,8 @@ export async function getStaticPaths() {
         slug: item.slug, 
         title: item.data.title, 
         premise: item.data.premise, 
-        genre: item.data.genre, 
+        genre: item.data.genre,
+        cover: item.data.cover,
         synopsis: item.data.synopsis
     }))
     return screenplaysPaths.map((screenplay) => ({
@@ -28,7 +29,7 @@ export async function getStaticPaths() {
 
 const { screenplay } = Astro.props;
 const { slug } = Astro.params;
-const { title, premise, genre, synopsis} = screenplay
+const { title, premise, genre, synopsis, cover} = screenplay
 
 const siteOrigin = Astro.url.origin
 const newPath = `archetype/affiliation/`
@@ -50,51 +51,62 @@ const absoluteUrl = new URL(newPath, siteOrigin).toString();
                 </SectionFadeIn>
             </div>
 
-            <div class="w-[85%] p-20">
-                <SectionFadeIn client:load delay={2.5} duration={3}>
-                    <div class="flex flex-col justify-end">
-                        {
-                            genre.map((item) => (
-                                <p class="text-liber-red font-black text-2xl">
-                                    {item}
-                                </p>
-                            ))
-                        }
-                    </div>
-                </SectionFadeIn>
-                <Title client:load title={title}/>
-                <div class="flex flex-col gap-12 my-80">
-                    <div class="py-40">
-                        <div 
-                            id="premise"
-                            data-section-id="premise"
-                            >
-                            <Caption client:load text={premise}/>
-                            <!-- <SectionFadeIn client:load duration={4} delay={2}>
-                            </SectionFadeIn> -->
+            <div class="w-[85%]">
+                <div class="p-20">
+                    <SectionFadeIn client:load delay={2.5} duration={3}>
+                        <div class="flex flex-col justify-end">
+                            {
+                                genre.map((item) => (
+                                    <p class="text-liber-red font-black text-2xl">
+                                        {item}
+                                    </p>
+                                ))
+                            }
                         </div>
-                    </div>
-    
-    
-                    <div class="py-40">
-                        <div 
-                            id="synopsis"
-                            data-section-id="synopsis"
-                            >
-                            <Caption client:load text={premise}/>
-                        </div>
-                    </div>
-    
-                    <div class="py-40">
-                        <div 
-                            id="strengths"
-                            data-section-id="strengths"
-                            >
-                            <Caption client:load text={premise}/>
-                        </div>
-                    </div>
-    
+                    </SectionFadeIn>
                 </div>
+                <Title client:load title={title}/>
+                <div class="w-full">
+                    {
+                        cover && 
+                        <img src={cover} class="w-full"/>
+                    }
+                </div>
+                <div class="p-20">
+                    <div class="flex flex-col gap-12 my-80">
+                        <div class="py-40">
+                            <div 
+                                id="premise"
+                                data-section-id="premise"
+                                >
+                                <Caption client:load text={premise}/>
+                                <!-- <SectionFadeIn client:load duration={4} delay={2}>
+                                </SectionFadeIn> -->
+                            </div>
+                        </div>
+        
+        
+                        <div class="py-40">
+                            <div 
+                                id="synopsis"
+                                data-section-id="synopsis"
+                                >
+                                <Caption client:load text={premise}/>
+                            </div>
+                        </div>
+        
+                        <div class="py-40">
+                            <div 
+                                id="strengths"
+                                data-section-id="strengths"
+                                >
+                                <Caption client:load text={premise}/>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+                
             </div>
         </div>
     </SectionFadeIn>

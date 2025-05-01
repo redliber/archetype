@@ -22,34 +22,30 @@ import Cursor from '../components/ui/cursors/Cursor';
 </html>
 
 <script>
-	// import Lenis from 'lenis';
+	import Lenis from 'lenis';
 
-	// const lenis = new Lenis({
-	//   lerp: 0.5, // Smoothness (0 to 1, lower is smoother)
-	//   duration: 2, // Animation duration in seconds
-	// //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -6 * t)), // Exponential easing
-	//   smoothWheel: true,
-	// //   smooth: true, // Enable smooth scrolling
-	// //   smoothTouch: false, // Disable for touch devices (native is better)
-	//   touchMultiplier: 2, // Touch scroll speed
-	//   infinite: false, // Disable infinite scrolling
-	//   autoRaf: true, // Automatically handle requestAnimationFrame
-	// });
+	const lenis = new Lenis({
+	lerp: 0.5, // Smoothness (0 to 1, lower is smoother)
+	duration: 2, // Animation duration in seconds
+	smoothWheel: true,
+	touchMultiplier: 2, // Touch scroll speed
+	autoRaf: true, // Automatically handle requestAnimationFrame
+	});
 
-	// document.querySelectorAll('a[href^="#"]').forEach((anchor:any) => {
-	// 	anchor.addEventListener('click', (e:any) => {
-	// 		e.preventDefault(); // Prevent default jump
-	// 		const targetId = anchor.getAttribute('href').substring(1); // Get ID (e.g., "premise")
-	// 		const targetElement = document.getElementById(targetId);
-	// 		if (targetElement) {
-	// 			lenis.scrollTo(targetElement, {
-	// 				offset: -80, // Adjust for fixed headers or padding
-	// 				duration: 1.5, // Scroll duration
-	// 				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-	// 			});
-	// 		}
-	// 	});
-	// });
+	document.querySelectorAll('a[href^="#"]').forEach((anchor:any) => {
+		anchor.addEventListener('click', (e:any) => {
+			e.preventDefault(); // Prevent default jump
+			const targetId = anchor.getAttribute('href').substring(1); // Get ID (e.g., "premise")
+			const targetElement = document.getElementById(targetId);
+			if (targetElement) {
+				lenis.scrollTo(targetElement, {
+					offset: -80, // Adjust for fixed headers or padding
+					duration: 1.5, // Scroll duration
+					easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+				});
+			}
+		});
+	});
 
 </script>
 
