@@ -14,6 +14,7 @@ import Cursor from '../components/ui/cursors/Cursor';
 		<meta name="generator" content={Astro.generator} />
 		<title>Archetype</title>
 		<ClientRouter/>
+		<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 	</head>
 	<Cursor client:load/>
 	<body transition:animate="fade">
@@ -21,31 +22,77 @@ import Cursor from '../components/ui/cursors/Cursor';
 	</body>
 </html>
 
-<script>
-	import Lenis from 'lenis';
+<script is:inline>
+if (!window.Lenis) {
+    console.error('Lenis not loaded. Ensure the CDN script is included.');
+  }
 
-	const lenis = new Lenis({
-	lerp: 0.5, // Smoothness (0 to 1, lower is smoother)
-	duration: 2, // Animation duration in seconds
-	smoothWheel: true,
-	touchMultiplier: 2, // Touch scroll speed
-	autoRaf: true, // Automatically handle requestAnimationFrame
-	});
+  function initializeLenis() {
+    console.log('Initializing Lenis');
+    const lenis = new window.Lenis({
+      lerp: 0.5,
+      duration: 2,
+      smoothWheel: true,
+      touchMultiplier: 2,
+      autoRaf: true,
+    });
 
-	document.querySelectorAll('a[href^="#"]').forEach((anchor:any) => {
-		anchor.addEventListener('click', (e:any) => {
-			e.preventDefault(); // Prevent default jump
-			const targetId = anchor.getAttribute('href').substring(1); // Get ID (e.g., "premise")
-			const targetElement = document.getElementById(targetId);
-			if (targetElement) {
-				lenis.scrollTo(targetElement, {
-					offset: -80, // Adjust for fixed headers or padding
-					duration: 1.5, // Scroll duration
-					easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-				});
-			}
-		});
-	});
+    // Start Lenis animation loop
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    const handleAnchorClick = (e) => {
+      console.log('Anchor clicked:', e.currentTarget.getAttribute('href'));
+      e.preventDefault();
+      const targetId = e.currentTarget.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        lenis.scrollTo(targetElement, {
+          offset: -80,
+          duration: 1.5,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+      } else {
+        console.warn(`Target element with ID "${targetId}" not found`);
+      }
+    };
+
+    // Use event delegation for anchor links
+    const handleDocumentClick = (e) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (anchor) {
+        handleAnchorClick(e);
+      }
+    };
+    document.body.addEventListener('click', handleDocumentClick);
+
+    return { lenis, handleDocumentClick };
+  }
+
+  // Initialize Lenis on page load
+  let { lenis, handleDocumentClick } = initializeLenis();
+
+  // Reinitialize on View Transition
+  document.addEventListener('astro:page-load', () => {
+    console.log('astro:page-load event fired');
+    if (lenis) {
+      lenis.destroy();
+      console.log('Previous Lenis instance destroyed');
+      document.body.removeEventListener('click', handleDocumentClick);
+    }
+    ({ lenis, handleDocumentClick } = initializeLenis());
+  });
+
+  // Debug View Transition events
+  document.addEventListener('astro:before-swap', () => {
+    console.log('astro:before-swap event fired');
+  });
+  document.addEventListener('astro:after-swap', () => {
+    console.log('astro:after-swap event fired');
+  });
 
 </script>
 
