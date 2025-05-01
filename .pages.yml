@@ -17,6 +17,9 @@ content:
         options :
           collection : screenplay
           multiple : true
+          search : name
+          value : '{name}'
+          label : '{label}'
   - name : character
     label : Character
     type : collection
