@@ -61,7 +61,7 @@ content:
     label : Affiliation
     type : collection
     path : src/content/affiliation
-    filename : "{business}.md"
+    filename : 'fields.title'
     view :
       primary : business
     fields :
