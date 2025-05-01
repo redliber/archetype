@@ -48,6 +48,11 @@ content:
       - name : premise
         label : Premise
         type : string
+      - name : cover
+        label : Cover
+        type : image
+        options :
+          path : cover
       - name : genre
         label : Genre
         type : select
