@@ -30,7 +30,9 @@ const { screenplay } = Astro.props;
 const { slug } = Astro.params;
 const { title, premise, genre, synopsis} = screenplay
 
-console.log('Genres -->  ', genre)
+const siteOrigin = Astro.url.origin
+const newPath = `archetype/affiliation/`
+const absoluteUrl = new URL(newPath, siteOrigin).toString();
 
 ---
 
@@ -43,7 +45,7 @@ console.log('Genres -->  ', genre)
                         <div class="p-10 w-full text-right">
                             <a href="/archetype" class="font-heading font-black hover:text-liber-red-2 transition-all duration-100 ease-in-out ">archetype</a>
                         </div>
-                        <SideBar slug={slug} client:load />
+                        <SideBar sitePath={absoluteUrl} slug={slug} client:load />
                     </div>
                 </SectionFadeIn>
             </div>

@@ -92,14 +92,14 @@ export default function Card({title, genres, index, link} : {title: string, genr
             border-[1px] border-liber-red rounded-sm
             p-10 
             w-2xl min-h-[50vh]
-            shadow-2xl shadow-liber-red/30
+            shadow-2xl shadow-liber-red/50
             flex flex-col justify-between
             bg-liber-beige font-heading 
             ` + `z-[${100+index}]`}>
                 <div
                     ref={enterRef} 
-                    className="text-right place-self-end rounded-sm opacity-0 bg-liber-beige font-black text-liber-red p-4 hover:scale-125 transition-all duration-200">
-                    <a href={link}>ENTER</a>
+                    className="text-right place-self-end rounded-sm opacity-0 bg-liber-beige font-black text-liber-red  hover:scale-125 transition-all duration-200 p-2">
+                    <a href={link}>→ &nbsp; ENTER</a>
                 </div>
                 <div className="my-4 flex flex-row justify-between w-full">
                     <p

@@ -35,8 +35,9 @@ function CaptionSpan({word}: {word:string}) {
                 opacity: 1,
                 filter: 'blur(0px)'
             }, {
-                duration: 0.5,
-                type: 'spring'
+                duration: 2,
+                type: 'spring',
+                delay: 0.5
             })
         }
     })

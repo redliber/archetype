@@ -85,6 +85,7 @@ export default function Input({siteUrl}: {siteUrl: string}) {
             const absoluteUrl = new URL(`archetype/affiliation/${encodeURIComponent(target)}`, siteUrl).toString();
             window.location.href = absoluteUrl;
           }
+        localStorage.setItem('affiliation', useVal)
     }
     
     return (

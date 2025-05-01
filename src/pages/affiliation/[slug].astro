@@ -37,8 +37,11 @@ const siteOrigin = Astro.url.origin
 
 <Layout>
 	<div class="w-[100vw] h-[100vh] flex flex-col items-center p-10 overflow-hidden">
-        <SectionFadeIn delay={0.5} client:load>
-            <Hero client:load text={title} className='text-xl font-black'/>
+        <SectionFadeIn delay={1.5} client:load>
+            <div class="flex flex-col gap-0 justify-center align-middle">
+                <a href={String(new URL(`archetype`, siteOrigin).toString())} class="text-md text-center font-black font-heading text-md">archetype</a>
+                <p class="text-xl text-md text-center font-black font-heading text-liber-brown">{title}</p>
+            </div>
         </SectionFadeIn>
         <div class="flex flex-wrap gap-12 my-32">
             {
@@ -48,8 +51,8 @@ const siteOrigin = Astro.url.origin
 
                     return (
                         <SectionFadeIn
-                            duration={2}
-                            delay={1.25} 
+                            duration={3}
+                            delay={2.25} 
                             client:load>
                             <Card client:load
                                 link={absoluteUrl}
