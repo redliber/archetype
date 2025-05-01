@@ -6,6 +6,7 @@ premise: Rai, seorang gadis remaja Bali kleptomaniak yang ditantang oleh
   mengembalikan tiga patung curian yang sakral di Bali ke tempat asalnya dengan
   memulai road-trip ke lokasi-lokasi turisme Bali ditemani neneknya juga Arya
   gebetannya dengan segala rintangannya.
+cover: /src/content/media/Screenshot 2025-03-29 194033.png
 genre:
   - Drama
   - Coming-of-age
