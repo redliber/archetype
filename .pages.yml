@@ -52,6 +52,7 @@ content:
         label : Genre
         type : select
         options :
+          multiple : true
           values : [Philosophy, Psychology, Crime, History, Sci-Fi, Politics, Alchemy, Religious, Legends, Young Adult, Action, Espionage, Drama, Family, Coming-of-age, Biography, Horror, Romance, Fantasy, Zombie, Thriller]
       - name : synopsis
         label : Synopsis
