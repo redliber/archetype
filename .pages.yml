@@ -1,5 +1,22 @@
 media : "src/content/media"
 content:
+  - name : affiliation
+    label : Affiliation
+    type : collection
+    path : src/content/affiliation
+    filename : '{primary}.md'
+    view :
+      primary : name
+    fields :
+      - name : name
+        label : Name
+        type : string
+      - name : screenplay
+        label : Screenplay
+        type : reference
+        options :
+          collection : screenplay
+          multiple : true
   - name : character
     label : Character
     type : collection
