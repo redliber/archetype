@@ -4,6 +4,7 @@ premise: Ketika PRADIPTA (43) menerima text-message dari nomor yang tidak
   dikenal, ia membuka foto pengirim dan melihat wajah familiar, AURA (40),
   mantannya sewaktu SMA yang sedang reach out kepada teman-teman lama untuk
   reuni.
+cover: /src/content/media/aura-home.png
 genre:
   - Thriller
   - Drama
