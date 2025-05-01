@@ -1,0 +1,69 @@
+'use client'
+
+import { useEffect, useState } from "react";
+import Hero from "../ui/Hero"
+import { useWindowScroll, useWindowSize } from "@uidotdev/usehooks";
+import { useAnimate } from "framer-motion";
+import { lerp, scaleValue } from "../../utils/kit";
+
+
+export default function Title({title}: {title: string}) {
+    const [{ x, y }, scrollTo] = useWindowScroll();
+    const {width, height} = useWindowSize();
+    const [useHeroSize, setHeroSize] = useState(1)
+    const [heroScope, heroAnimate] = useAnimate()
+    const [introScope, introAnimate] = useAnimate()
+
+    const relativeHeight = y && height ? y/height : 0
+
+    useEffect(() => {
+        
+        const STARTRESIZING = 0.2
+        const SCROLLEND = 1
+        const SCROLLENDHEROSIZE = 0.25
+        const LERPCONST = 0.2
+
+        if (relativeHeight > STARTRESIZING) {
+            const newVal = Math.max(lerp(useHeroSize, scaleValue(relativeHeight, [STARTRESIZING, SCROLLEND], [1, SCROLLENDHEROSIZE]), LERPCONST), SCROLLENDHEROSIZE)
+            setHeroSize(newVal)
+        } else {
+            setHeroSize(1)
+        }
+    }, [relativeHeight])
+
+    useEffect(() => {
+        introAnimate(introScope.current, {
+            opacity: 1,
+            filter: 'blur(0px)'
+        }, {
+            duration: 2,
+            type: 'spring'
+        })
+    })
+
+
+    return (
+        <>
+            <div className="h-[25vh]"></div>
+            <div
+                ref={introScope} 
+                className="sticky top-0 py-12 justify-items-end"
+                style={{
+                    opacity: 0,
+                    filter: 'blur(30px)'
+                }}
+            >
+                <div
+                    ref={heroScope}
+                    style={{
+                        scale: useHeroSize,
+                        transformOrigin: 'top right',
+                    }}
+                >
+                    <Hero className={` font-extrabold text-8xl `} text={title}/>
+                </div>
+            </div>
+            <div className="h-[25vh]"></div>
+        </>
+    )
+}

@@ -1,9 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import Hero from '../components/ui/Hero';
 import Input from '../components/ui/Input';
 import Layout from '../layouts/Layout.astro';
 
-
+const screenplays = await getCollection('screenplay')
 ---
 
 <Layout>

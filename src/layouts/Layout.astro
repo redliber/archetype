@@ -1,6 +1,7 @@
 ---
 import '../assets/global.css'
 import { ClientRouter, slide } from "astro:transitions";
+import Cursor from '../components/ui/cursor';
 
 
 ---
@@ -15,9 +16,51 @@ import { ClientRouter, slide } from "astro:transitions";
 		<ClientRouter/>
 	</head>
 	<body transition:animate="fade">
+		<Cursor client:load/>
 		<slot />
 	</body>
 </html>
+
+<script>
+	import Lenis from '@studio-freight/lenis';
+
+	// Initialize Lenis with custom options
+	const lenis = new Lenis({
+	  lerp: 0.1, // Smoothness (0 to 1, lower is smoother)
+	  duration: 1.2, // Animation duration in seconds
+	  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential easing
+	//   smooth: true, // Enable smooth scrolling
+	//   smoothTouch: false, // Disable for touch devices (native is better)
+	  touchMultiplier: 2, // Touch scroll speed
+	  infinite: false, // Disable infinite scrolling
+	//   autoRaf: true, // Automatically handle requestAnimationFrame
+	});
+
+	// Start the animation loop (if autoRaf is false)
+
+	function raf(time:any) {
+	  lenis.raf(time);
+	  requestAnimationFrame(raf);
+	}
+	requestAnimationFrame(raf);
+
+	      // Handle anchor link clicks
+	document.querySelectorAll('a[href^="#"]').forEach((anchor:any) => {
+		anchor.addEventListener('click', (e:any) => {
+			e.preventDefault(); // Prevent default jump
+			const targetId = anchor.getAttribute('href').substring(1); // Get ID (e.g., "premise")
+			const targetElement = document.getElementById(targetId);
+			if (targetElement) {
+			lenis.scrollTo(targetElement, {
+				offset: -80, // Adjust for fixed headers or padding
+				duration: 1.5, // Scroll duration
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			});
+			}
+		});
+		});
+
+</script>
 
 <style>
 	html,

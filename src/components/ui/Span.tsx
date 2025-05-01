@@ -8,7 +8,7 @@ export default function Span({letter, key}: {letter: string, key: number}) {
 
     function handleHover() {
         animate(scope.current, {
-            scale: 1.75,
+            scale: 1.25,
             rotate: Math.random() * 30 * (Math.random() < 0.5 ? -1 : 1),
             color: 'var(--color-liber-red-2)'
         }, {
@@ -32,13 +32,19 @@ export default function Span({letter, key}: {letter: string, key: number}) {
 
     function handleClick() {
         animate(scope.current, {
-            scale: 1.5,
+            scale: 1.1,
             rotate: Math.random() * 20 * (Math.random() < 0.5 ? 1 : -1),
             color: 'var(--color-liber-red-3)'
         }, {
             duration: 0.5,
             type: 'spring'
         })
+    }
+
+    if (letter === " ") {
+        return (
+            <><p>&nbsp;</p></>
+        )
     }
 
     return (

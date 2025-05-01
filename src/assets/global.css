@@ -8,7 +8,7 @@
     --color-liber-red: #fc3636;
     --color-liber-red-2: #A75B5B;
     --color-liber-red-3: #D24F4F;
-    
+    --color-liber-brown: #524848;
   }
 
 html {
@@ -19,6 +19,7 @@ html {
   @apply tracking-[0.01em];
   scroll-behavior: smooth;
   font-family: 'Plus Jakarta Sans Variable', 'sans-serif';
+  @apply cursor-none;
 }
 
 h1, h2, h3, h4 {
@@ -72,4 +73,44 @@ h1 {
       transform: translateY(-50%);
     }
   }
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4c0519;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e11d48;
+  /* border-radius: 2px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #881337;
 }
