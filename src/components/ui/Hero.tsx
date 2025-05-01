@@ -11,7 +11,7 @@ export default function Hero({text, className}: {text: string, className?: strin
         <div
             className={`
             font-heading  
-            flex flex-wrap text-center ` + fontSettings}>
+            flex flex-row gap-[0.005px] text-center ` + fontSettings}>
             {
                 textArr.map((item, index) => {
                     return (

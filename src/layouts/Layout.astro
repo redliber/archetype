@@ -22,18 +22,19 @@ import Cursor from '../components/ui/cursors/Cursor';
 </html>
 
 <script>
-	import Lenis from '@studio-freight/lenis';
+	import Lenis from 'lenis';
 
 	// Initialize Lenis with custom options
 	const lenis = new Lenis({
-	  lerp: 0.1, // Smoothness (0 to 1, lower is smoother)
-	  duration: 1.2, // Animation duration in seconds
-	  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential easing
+	  lerp: 0.25, // Smoothness (0 to 1, lower is smoother)
+	  duration: 1.5, // Animation duration in seconds
+	//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -6 * t)), // Exponential easing
+	  smoothWheel: true,
 	//   smooth: true, // Enable smooth scrolling
 	//   smoothTouch: false, // Disable for touch devices (native is better)
 	  touchMultiplier: 2, // Touch scroll speed
 	  infinite: false, // Disable infinite scrolling
-	//   autoRaf: true, // Automatically handle requestAnimationFrame
+	  autoRaf: true, // Automatically handle requestAnimationFrame
 	});
 
 	// Start the animation loop (if autoRaf is false)
@@ -44,21 +45,21 @@ import Cursor from '../components/ui/cursors/Cursor';
 	}
 	requestAnimationFrame(raf);
 
-	      // Handle anchor link clicks
+	// Handle anchor link clicks
 	document.querySelectorAll('a[href^="#"]').forEach((anchor:any) => {
 		anchor.addEventListener('click', (e:any) => {
 			e.preventDefault(); // Prevent default jump
 			const targetId = anchor.getAttribute('href').substring(1); // Get ID (e.g., "premise")
 			const targetElement = document.getElementById(targetId);
 			if (targetElement) {
-			lenis.scrollTo(targetElement, {
-				offset: -80, // Adjust for fixed headers or padding
-				duration: 1.5, // Scroll duration
-				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-			});
+				lenis.scrollTo(targetElement, {
+					offset: -80, // Adjust for fixed headers or padding
+					duration: 1.5, // Scroll duration
+					easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+				});
 			}
 		});
-		});
+	});
 
 </script>
 
