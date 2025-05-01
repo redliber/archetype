@@ -19,7 +19,7 @@ content:
           multiple : true
           search : name
           value : '{name}'
-          label : '{label}'
+          label : '{name}'
   - name : character
     label : Character
     type : collection
