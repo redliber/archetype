@@ -1,11 +1,14 @@
 @import "tailwindcss";
-@import "@fontsource/major-mono-display";
-@import "@fontsource/rubik-mono-one";
+@import '@fontsource-variable/anybody';
+@import '@fontsource-variable/plus-jakarta-sans';
 
 @theme {
-    --font-heading: 'Major Mono Display', 'monospace';
+    --font-heading: 'Anybody Variable', 'sans-serif';
     --color-liber-beige: #dad6cf;
     --color-liber-red: #fc3636;
+    --color-liber-red-2: #A75B5B;
+    --color-liber-red-3: #D24F4F;
+    
   }
 
 html {
@@ -15,10 +18,12 @@ html {
   @apply bg-liber-beige;
   @apply tracking-[0.01em];
   scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans Variable', 'sans-serif';
 }
 
 h1, h2, h3, h4 {
     @apply font-heading;
+    @apply font-bold;
 }
 
 h1 {

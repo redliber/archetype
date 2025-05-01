@@ -1,9 +1,14 @@
 ---
+import Hero from '../components/ui/Hero';
+import Input from '../components/ui/Input';
 import Layout from '../layouts/Layout.astro';
 
 
 ---
 
 <Layout>
-	<h1>ARCHETYPE</h1>
+	<div class="w-[100vw] h-[100vh] flex flex-col items-center justify-center p-10">
+		<Hero client:load text='archetype'/>
+		<Input client:load />
+	</div>
 </Layout>

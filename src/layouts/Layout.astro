@@ -1,8 +1,6 @@
 ---
-import "@fontsource/major-mono-display"
-import "@fontsource/rubik-mono-one"
-
 import '../assets/global.css'
+import { ClientRouter, slide } from "astro:transitions";
 
 
 ---
@@ -14,11 +12,10 @@ import '../assets/global.css'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Archetype</title>
+		<ClientRouter/>
 	</head>
-	<body>
-		<div class="p-10">
-			<slot />
-		</div>
+	<body transition:animate="fade">
+		<slot />
 	</body>
 </html>
 
