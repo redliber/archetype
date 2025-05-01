@@ -1,17 +1,5 @@
 media : "src/content/media"
 content:
-  - name : affiliation
-    label : Affiliation
-    type : collection
-    path : src/content/affiliation
-    filename : '{primary}.md'
-    view :
-      primary : business
-    fields :
-      - name : business
-        label : Name
-        type : string
- 
   - name : character
     label : Character
     type : collection
@@ -69,3 +57,20 @@ content:
       - name : synopsis
         label : Synopsis
         type : rich-text
+  - name : affiliation
+    label : Affiliation
+    type : collection
+    path : src/content/affiliation
+    fields :
+      - name : business
+        label : Name
+        type : string
+      - name : screenplay
+        label : Screenplay
+        type : reference
+        options :
+          collection : screenplay
+          multiple : true
+          search : 'title'
+          value : '{title}'
+          label : '{title}'
