@@ -10,7 +10,16 @@ const screenplayCollection = defineCollection({
   }),
 });
 
+const affiliationCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    screenplay: z.array(z.string()),
+  }),
+});
+
 export const collections = {
   screenplay: screenplayCollection,
+  affiliation: affiliationCollection
 };
 

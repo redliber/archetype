@@ -10,77 +10,27 @@ import SideBar from '../../components/sections/SideBar';
 import CaptionAnim from '../../components/ui/CaptionAnim';
 
 export async function getStaticPaths() {
-    const screenplays = await getCollection('screenplay')
-    const screenplaysPaths = screenplays.map((item) => ({
+    const affiliations = await getCollection('affiliation')
+    const affiliationsPaths = affiliations.map((item) => ({
         slug: item.slug, 
         title: item.data.title, 
-        premise: item.data.premise, 
-        genre: item.data.genre, 
-        synopsis: item.data.synopsis
+        screenplay: item.data.screenplay, 
     }))
-    return screenplaysPaths.map((screenplay) => ({
-        params: {slug: screenplay.slug},
-        props: {screenplay}
+    return affiliationsPaths.map((affiliation) => ({
+        params: {slug: affiliation.slug},
+        props: {affiliation}
     }))
 }
 
 
-const { screenplay } = Astro.props;
+const { affiliation } = Astro.props;
 const { slug } = Astro.params;
-const { title, premise, genre, synopsis} = screenplay
+const { title, screenplay} = affiliation
 
 ---
 
 <Layout>
 	<div class="w-[100vw] h-[100vh] flex flex-row items-start">
-        <div class="w-[15%] h-full ">
-            <div class="fixed w-[15%] top-0 bg-liber-red text-liber-beige h-full flex flex-col justify-between">
-                <div class="p-10 w-full text-right">
-                    <a href="/archetype" class="font-heading font-black hover:text-liber-red-2 transition-all duration-100 ease-in-out ">archetype</a>
-                </div>
-                <SideBar slug={slug} client:load />
-            </div>
-        </div>
-        <div class="w-[85%] p-20">
-            <Title client:load title={title}/>
-            <div class="flex flex-col gap-12 my-80 pr-24">
-                <div class="py-40">
-                    <div 
-                        id="premise"
-                        data-section-id="premise"
-                        >
-                        <Caption client:load text={premise}/>
-                    </div>
-                </div>
-
-                <div class="py-40">
-                    <div 
-                        id="genres"
-                        data-section-id="genres"
-                        >
-                        <Caption client:load text={premise}/>
-                    </div>
-                </div>
-
-                <div class="py-40">
-                    <div 
-                        id="synopsis"
-                        data-section-id="synopsis"
-                        >
-                        <Caption client:load text={premise}/>
-                    </div>
-                </div>
-
-                <div class="py-40">
-                    <div 
-                        id="strengths"
-                        data-section-id="strengths"
-                        >
-                        <Caption client:load text={premise}/>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <p class="text-3xl">{JSON.stringify(screenplay)}</p>
 	</div>
 </Layout>
