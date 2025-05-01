@@ -6,9 +6,9 @@ content:
     path : src/content/affiliation
     filename : '{primary}.md'
     view :
-      primary : name
+      primary : business
     fields :
-      - name : name
+      - name : business
         label : Name
         type : string
       - name : screenplay
