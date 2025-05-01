@@ -50,10 +50,11 @@ export default function SideBar ({slug} : {slug: string}) {
                 content.map((item, index) => {
                     return (
                         <div key={index} className={` 
-                            hover:font-black hover:-translate-x-2 
+                            hover:font-black hover:translate-x-2
+                            active:text-liber-brown
                             origin-right
                             transition-all duration-200 
-                            ` + (activeSection === item ? ` text-orange-100 font-black ` : ` `)}>
+                            ` + (activeSection === item ? ` text-orange-100 font-black translate-x-2` : ` `)}>
                             <a
                                 href={`#${item}`}
                                 data-section-id={`#${item}`}

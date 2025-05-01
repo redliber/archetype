@@ -9,7 +9,7 @@
     --color-liber-red-2: #A75B5B;
     --color-liber-red-3: #D24F4F;
     --color-liber-brown: #524848;
-  }
+}
 
 html {
   @apply text-liber-red;
@@ -19,7 +19,14 @@ html {
   @apply tracking-[0.01em];
   scroll-behavior: smooth;
   font-family: 'Plus Jakarta Sans Variable', 'sans-serif';
+}
+
+* {
   @apply cursor-none;
+  @apply **:cursor-none;
+  @apply hover:cursor-none;
+  @apply active:cursor-none;
+  @apply focus:cursor-none;
 }
 
 h1, h2, h3, h4 {

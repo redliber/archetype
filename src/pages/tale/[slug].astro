@@ -7,6 +7,7 @@ import Caption from '../../components/ui/Caption';
 import '../../assets/global.css'
 import Title from '../../components/sections/Title';
 import SideBar from '../../components/sections/SideBar';
+import CaptionAnim from '../../components/ui/CaptionAnim';
 
 export async function getStaticPaths() {
     const screenplays = await getCollection('screenplay')
@@ -33,7 +34,10 @@ const { title, premise, genre, synopsis} = screenplay
 <Layout>
 	<div class="w-[100vw] h-[100vh] flex flex-row items-start">
         <div class="w-[15%] h-full ">
-            <div class="fixed w-[15%] top-0 bg-liber-red text-liber-beige h-full">
+            <div class="fixed w-[15%] top-0 bg-liber-red text-liber-beige h-full flex flex-col justify-between">
+                <div class="p-10 w-full text-right">
+                    <a href="/archetype" class="font-heading font-black hover:text-liber-red-2 transition-all duration-100 ease-in-out ">archetype</a>
+                </div>
                 <SideBar slug={slug} client:load />
             </div>
         </div>

@@ -1,7 +1,7 @@
 ---
 import '../assets/global.css'
 import { ClientRouter, slide } from "astro:transitions";
-import Cursor from '../components/ui/cursor';
+import Cursor from '../components/ui/cursors/Cursor';
 
 
 ---
@@ -15,8 +15,8 @@ import Cursor from '../components/ui/cursor';
 		<title>Archetype</title>
 		<ClientRouter/>
 	</head>
+	<Cursor client:load/>
 	<body transition:animate="fade">
-		<Cursor client:load/>
 		<slot />
 	</body>
 </html>
