@@ -4,7 +4,7 @@ premise: Seorang suami berjiwa lemah yang mendambakan kontrol dan kesegaran di
   ranjang pernikahannya yang monoton, didatangi mantannya sewaktu SMA yang
   tampaknya ingin merayunya ke ranjang. Curiga dan tertarik, ia tidak sadar akan
   tujuan sesungguhnya, mengungkap rahasia gelap di masa lalu mereka.
-cover: /src/content/media/ARCHETYPE-aura-cover-image.png
+cover: /public/media/ARCHETYPE-aura-cover-image.png
 genre:
   - Thriller
   - Drama
