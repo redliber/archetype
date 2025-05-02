@@ -31,6 +31,9 @@ synopsis: >-
   sedikit telat.
 
 
+  ![](/public/media/ARCHETYPE-raya-02.jpg)
+
+
   Sampai di Cafe Layar Lima, Prabu, ownernya, tampak deman pada Raya dan selalu
   menunggu kedatangannya saat ada delivery. Raya sadar ini namun tidak terlalu
   responsif.
@@ -54,9 +57,15 @@ synopsis: >-
   misterius yang raksasa.
 
 
+  ![](/public/media/ARCHETYPE-raya-05.jpg)
+
+
   Di tengah jalan, Raya sering membaca-baca katalog kapal dan berbincang dengan
   pekerja Pelabuhan mengenai info terbaru dunia pelayaran, penahkodaan, dan
   pelautan. Para pekerja tersebut kenal Raya semenjak cilik.
+
+
+  ![](/public/media/ARCHETYPE-raya-03.jpg)
 
 
   Suatu sore, Raya menunda orderan delivery ke tempat Prabu untuk mengunjungi
@@ -67,6 +76,12 @@ synopsis: >-
   Banyak kali Prabu berusaha meraih hati Raya dengan membelikan berbagai macam
   snack dan menawarkan bantuan upgrade motor Raya yang sering rusak. Sayangnya,
   Raya tampak enggan menerima bantuan dari siapapun.
+
+
+  ![](/public/media/ARCHETYPE-raya-01.jpg)
+
+
+  ![](/public/media/ARCHETYPE-raya-04.jpg)
 
 
   Raya curhat dengan Munir mengenai Amerika sambil ngemil snack Prabu. Anak
@@ -93,6 +108,9 @@ synopsis: >-
   melihat jalan yang mereka lewati. Ia kabur dari mobil, Prabu mengejar dan Raya
   mengungkap bahwa tempat mereka kena macet adalah TKP kecelakaan yang merenggut
   hidup suaminya dan beberapa keluarga Munir.
+
+
+  ![](/public/media/ARCHETYPE-raya-06.jpg)
 
 
   Raya tiba di hari keberangkatan Nara ke Amerika. Mereka berpisah pilu, Raya
@@ -123,6 +141,9 @@ synopsis: >-
   Nara dan bila ketahuan, ia akan dipenjara dan ia tidak mau Nara tumbuh tanpa
   satupun orang tua. Munir juga terpukul dan menangis bersama Raya, namun ia
   memaafkan Raya.
+
+
+  ![](/public/media/ARCHETYPE-raya-08.png)
 
 
   Beberapa bulan kemudian, Raya berpamit pada Prabu untuk naik kapal ferri.
