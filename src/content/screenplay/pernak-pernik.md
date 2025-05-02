@@ -6,46 +6,116 @@ premise: Rai, seorang gadis remaja Bali kleptomaniak yang ditantang oleh
   mengembalikan tiga patung curian yang sakral di Bali ke tempat asalnya dengan
   memulai road-trip ke lokasi-lokasi turisme Bali ditemani neneknya juga Arya
   gebetannya dengan segala rintangannya.
-cover: /src/content/media/Screenshot 2025-03-29 194033.png
 genre:
   - Drama
   - Coming-of-age
 synopsis: >-
-  Di tengah kebisingan kelas, RAI (15), seorang gadis gesit dan cermat, dengan
-  cekatan, menilap sebuah penggaris unik yang menarik perhatiannya dari tempat
-  pensil milik temannya. Setelah sekolah kosong, Rai menyelinap kembali untuk
-  mengantungi pernak-pernik stationery yang ditinggal teman-temannya di
-  laci-laci meja sembil tersenyum puas tanpa merasa salah. Beberapa _pouches_
-  yang diketemukan berisi hal-hal aneh dan bisa membuat skandal heboh di sekolah
-  dan di lingkungan. Rai tidak terusik melihat itu semua, seolah terbiasa.
+  # Kedatangan Nenek Perantau
 
 
-  Di jalan pulang, Rai mendapat kabar bahwa ia dicari, ARYA (18), teman prianya
-  yang easygoing dan berparas tampan. Diam-diam, Rai menyukai Arya yang terlihat
-  memiliki hidup bebas dan kepercayaan diri yang tinggi. Seringkali, mata Rai
-  jelalatan melihat pernak-pernik unik dan kerap kali termakan hasrat
-  mencurinya. Pembenaran moral yang ia tanamkan ke diri sendiri adalah bahwa
-  benda-benda kecil yang ia kantungi bersifat tak begitu penting dan bahkan
-  tidak bermakna bagi pemiliknya.
+  ![](/src/content/media/ARCHETYPE-pernak_pernik-02.png)
 
 
-  Arya tampak sibuk chat sembari selonjoran. Ia mengajak Rai nongkrong di Tirta
-  Gangga mengisi libur sekolah Rai yang akan datang dalam seminggu. Meski
-  sedikit terayu, Rai sadar bahwa Arya hanya ingin ditemani mencari tante-tante
-  turis bule untuk digombali karena mereka tidak sungkan jajanin cowok-cowok
-  lokal Bali. Rai pura-pura seolah mau tidak mau menemani Arya. Selesai obrolan
-  mereka, Arya bilang bahwa ia akan mampir ke tempat Rai minggu depan.
+  **RAI** (15), seorang gadis yang gesit dan cerdik, hobi menilap berbagai
+  pernak-pernik kecil dan unik dengan justifikasi bahwa pemiliknya tidak akan
+  merasa kehilangan.
 
 
-  Saat Rai pulang, ibunya, MARINI (33), seorang single-mom pekerja keras dan
-  bernada tegas, sedang berbincang dengan seorang wanita asing. Marini
-  memperkenalkan wanita itu: MUKTI (50), berparas cantik dan energi muda dengan
-  lengan penuh tato. Mukti adalah ibu kandung Marini, nenek kandung Rai yang
-  baru pernah muncul dihidupnya. Nenek Mukti gembira melihat cucunya, sementara
-  Rai terlihat biasa-biasa aja. Namun, dalam semalam, nenek Mukti berhasil
-  memikat hati Rai dengan menceritakan perjalanan hidupnya: Menjelajahi berbagai
-  kebudayaan, menelusuri pedalaman, dan bertemu banyak karakter. Anehnya, Rai
-  menyadari bahwa ibunya tampak berat atas kehadiran nenek Mukti tanpa alasan
-  jelas. Marini hanya berwacana untuk mengembalikan pouch milik ayah Rai yang
-  Marini tidak sengaja ambil saat ia berkunjung ke rumah.
+  Di jalan pulang, ia dicari oleh **ARYA** (18), pria tampan dan santai yang ia
+  kagumi. Arya mengajaknya untuk nongkrong di Tirta Gangga sembari Rai libur
+  sekolah, namun Rai tahu bahwa Arya lebih tertarik menggoda turis bule.
+
+
+  ![](/src/content/media/ARCHETYPE-pernak_pernik-06.png)
+
+
+  ![](/src/content/media/ARCHETYPE-pernak_pernik-05.png)
+
+
+  Di rumah, Rai dan ibunya, **MARINI** (33) bertemu dengan **MUKTI** (50),
+  neneknya yang baru muncul di hidupnya. Mukti memikat Rai dengan cerita tentang
+  perjalanannya, meskipun Rai merasakan ketegangan antara Mukti dan ibunya.
+
+
+  Malam itu, Mukti menemukan koleksi barang curian Rai yang disembunyikan,
+  termasuk tiga patung dewa Hindu, yang mengarah pada konfrontasi di mana Rai
+  mengakui kecenderungan kleptomaniacnya.
+
+
+  # Road Trip
+
+
+  ![](/src/content/media/ARCHETYPE-pernak_pernik-01.jpg)
+
+
+  Mukti dengan lembut mendesak Rai untuk mengembalikan patung-patung tersebut ke
+  situs suci masing-masing, berjanji untuk merahasiakannya jika Rai berubah.
+
+
+  Seminggu kemudian, mereka memulai road trip untuk mengembalikan patung-patung
+  itu, dengan Rai juga berencana untuk mengembalikan pouch milik ayahnya,
+  **AGUNG** (36).
+
+
+  Arya ikut serta sekalian menumpang ke Tirta Gangga. Di perjalanan, mereka
+  bertemu dengan sepupu Rai, **DEVA** (24), di antara para demonstran politik
+  yang menentang politikus korup Wayan Trinada.
+
+
+  Rai berjuang melawan insting kleptonya dan berhasil mengembalikan dua dari
+  tiga patung yang ia bawa, tetapi tetap dihadapkan pada banyak godaan.
+
+
+  Nenek Mukti sadar akan perjuangan internal Rai dan memberikan amplop berisi
+  surat “jalan keluar” yang bisa ia gunakan untuk tidak ditangkap polisi bila ia
+  ketahuan atau dianggap mencuri.
+
+
+  Perjalanan berubah arah ketika Rai, marah karena merasa dikhianati oleh Arya
+  yang malah meminta Rai mencuri sesuatu untuk Arya hadiahkan ke turis
+  gebetannya. Rai menolak, namun malah mencuri barang tersebut untuk
+  disembunyikan di tas turis tersebut agar ia dianggap pencuri.
+
+
+  ![](/src/content/media/ARCHETYPE-pernak_pernik-04-2.png)
+
+
+  Sayangnya, Rai ketahuan berusaha menjebak turis tersebut dan dikejar oleh
+  polisi-polisi lokal.
+
+
+  Rai menggunakan surat “jalan keluar” dari Mukti; Ternyata, nenek Mukti
+  mengganti surat itu supaya Rai aman dan nenek Mukti yang mengorbankan diri
+  untuk ditangkap.
+
+
+  # Cuci Uang
+
+
+  ![](/src/content/media/ARCHETYPE-pernak_pernik-03.png)
+
+
+  Marini dan Agung pun dipanggil datang setelah nenek mukti dibawa ke kantor
+  polisi. Mulailah konfrontasi keluarga mengungkapkan masalah yang mendalam;
+  Marini mengakui bahwa ia pernah dituduh mencuri saat muda, yang diperburuk
+  oleh ketidakhadiran Mukti.
+
+
+  Rai mengaku bahwa tindakan kleptomaniacnya awalnya untuk mendapat perhatian
+  orang tuanya selama reuni singkat mereka.
+
+
+  Dengan bantuan Deva, Rai melarikan diri untuk bergabung dengan demonstran di
+  Hotel Bali Beach di mana Wayan Trinada sedang berkampanye.
+
+
+  Mereka bekerja sama untuk mempermalukan Trinada, dengan Rai perform sebuah
+  lelucon yang mengungkap Trinada di depan publik.
+
+
+  ![](/src/content/media/ARCHETYPE-pernak_pernik-07.png)
+
+
+  Ia kemudian menyerahkan diri kepada polisi atas tindakannya sendiri, memilih
+  rehabilitasi daripada penyangkalan, bertujuan untuk memulai hidup baru.
 ---
