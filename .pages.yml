@@ -1,4 +1,4 @@
-media : "src/content/media"
+media : "public/media"
 content:
   - name : character
     label : Character
