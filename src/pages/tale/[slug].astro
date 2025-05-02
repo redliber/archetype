@@ -46,7 +46,7 @@ synopsis.split('\n').filter((line) => line.trim() !== "").forEach((line) => {
   }
 })
 
-// console.log('Synopsis Array --> ', synopsis)
+const newCoverImgPath = new URL(cover, siteOrigin).toString()
 ---
 
 <Layout>
@@ -80,8 +80,8 @@ synopsis.split('\n').filter((line) => line.trim() !== "").forEach((line) => {
                 <Title client:load title={title}/>
                 <div class="w-full">
                     {
-                        cover &&
-                        <img src={cover} class="w-full"/>
+                        newCoverImgPath &&
+                        <img src={newCoverImgPath} class="w-full"/>
                     }
                 </div>
                 <div class="flex flex-col gap-12">
