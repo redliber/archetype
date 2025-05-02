@@ -94,4 +94,16 @@ synopsis: >-
   Balas dendam Aura berhasil, Pradipta dijadikan prasangka pemerkosaan anaknya
   sendiri. Barang bukti lainnya adalah rekaman-rekaman tidak lazim di kamar
   Mawar yang Aura telah selundupkan ke HP Pradipta.
+strength: >-
+  Topik abuse dari lelaki yang lemah, menunjukkan betapa bahayanya orang yang
+  lemah.
+
+
+  Twist mengguncangkan.
+
+
+  Aura sebagai anti-hero, penarik perhatian dan support penonton.
+
+
+  Market romance thriller yang mulai merajarela.
 ---
