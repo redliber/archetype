@@ -78,9 +78,6 @@ synopsis: >-
   Raya tampak enggan menerima bantuan dari siapapun.
 
 
-  ![](/public/media/ARCHETYPE-raya-01.jpg)
-
-
   ![](/public/media/ARCHETYPE-raya-04.jpg)
 
 

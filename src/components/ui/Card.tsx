@@ -43,8 +43,8 @@ export default function Card({title, genres, index, link} : {title: string, genr
             type: 'spring'
         })
     }
-    
-    
+
+
     function handleLeave() {
         animate(scope.current, {
             background: 'var(--color-liber-beige)',
@@ -82,7 +82,7 @@ export default function Card({title, genres, index, link} : {title: string, genr
     }
 
 
-    
+
     return (
         <div
             ref={scope}
@@ -90,26 +90,26 @@ export default function Card({title, genres, index, link} : {title: string, genr
             onMouseLeave={handleLeave}
             className={`
             border-[1px] border-liber-red rounded-sm
-            p-10 
-            w-2xl min-h-[50vh]
+            p-10
+            w-2xl min-h-[60vh]
             shadow-2xl shadow-liber-red/50
             flex flex-col justify-between
-            bg-liber-beige font-heading 
+            bg-liber-beige font-heading
             ` + `z-[${100+index}]`}>
                 <div
-                    ref={enterRef} 
+                    ref={enterRef}
                     className="text-right place-self-end rounded-sm opacity-0 bg-liber-beige font-black text-liber-red  hover:scale-125 transition-all duration-200 p-2">
                     <a href={link}>→ &nbsp; ENTER</a>
                 </div>
                 <div className="my-4 flex flex-row justify-between w-full">
                     <p
-                        ref={titleRef} 
+                        ref={titleRef}
                         className="text-8xl font-black tracking-tighter origin-top-right w-full">{title}
                     </p>
                 </div>
                 <div
                     ref={genresRef}
-                    className="my-4 font-black 
+                    className="my-4 font-black
                         text-4xl
                         opacity-0
                         origin-bottom-left
