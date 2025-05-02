@@ -5,8 +5,7 @@ premise: Seorang suami berjiwa lemah yang mendambakan kontrol dan kesegaran di
   tampaknya ingin merayunya ke ranjang. Curiga dan tertarik, ia tidak sadar akan
   tujuan sesungguhnya, mengungkap rahasia gelap di masa lalu mereka.
 cover: /public/media/ARCHETYPE-aura-cover-image.png
-characters: >-
-  ""
+characters: '""'
 genre:
   - Thriller
   - Drama
@@ -108,4 +107,10 @@ strength: >-
 
 
   Market romance thriller yang mulai merajarela.
+colors:
+  primary: liber-red
+  hover: liber-red-2
+  active: liber-red-3
+  secondary: liber-beige
+  accent: liber-brown
 ---
