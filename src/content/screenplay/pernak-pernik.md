@@ -6,7 +6,7 @@ premise: Rai, seorang gadis remaja Bali kleptomaniak yang ditantang oleh
   mengembalikan tiga patung curian yang sakral di Bali ke tempat asalnya dengan
   memulai road-trip ke lokasi-lokasi turisme Bali ditemani neneknya juga Arya
   gebetannya dengan segala rintangannya.
-cover: /src/content/media/ARCHETYPE-pernak_pernik-cover.png
+cover: /public/media/ARCHETYPE-pernak_pernik-cover.png
 genre:
   - Drama
   - Coming-of-age
@@ -15,12 +15,12 @@ synopsis: >-
   # Kedatangan Nenek Perantau
 
 
-  ![](/src/content/media/ARCHETYPE-pernak_pernik-02.png)
-
-
   **RAI** (15), seorang gadis yang gesit dan cerdik, hobi menilap berbagai
   pernak-pernik kecil dan unik dengan justifikasi bahwa pemiliknya tidak akan
   merasa kehilangan.
+
+
+  ![](/public/media/ARCHETYPE-pernak_pernik-02.png)
 
 
   Di jalan pulang, ia dicari oleh **ARYA** (18), pria tampan dan santai yang ia
@@ -28,10 +28,13 @@ synopsis: >-
   sekolah, namun Rai tahu bahwa Arya lebih tertarik menggoda turis bule.
 
 
-  ![](/src/content/media/ARCHETYPE-pernak_pernik-06.png)
-
-
   ![](/src/content/media/ARCHETYPE-pernak_pernik-05.png)
+
+
+  ![](/public/media/ARCHETYPE-pernak_pernik-05.png)
+
+
+  ![](/public/media/ARCHETYPE-pernak_pernik-06.png)
 
 
   Di rumah, Rai dan ibunya, **MARINI** (33) bertemu dengan **MUKTI** (50),
@@ -47,11 +50,11 @@ synopsis: >-
   # Road Trip
 
 
-  ![](/src/content/media/ARCHETYPE-pernak_pernik-01.jpg)
-
-
   Mukti dengan lembut mendesak Rai untuk mengembalikan patung-patung tersebut ke
   situs suci masing-masing, berjanji untuk merahasiakannya jika Rai berubah.
+
+
+  ![](/public/media/ARCHETYPE-pernak_pernik-01.jpg)
 
 
   Seminggu kemudian, mereka memulai road trip untuk mengembalikan patung-patung
@@ -79,7 +82,7 @@ synopsis: >-
   disembunyikan di tas turis tersebut agar ia dianggap pencuri.
 
 
-  ![](/src/content/media/ARCHETYPE-pernak_pernik-04-2.png)
+  ![](/public/media/ARCHETYPE-pernak_pernik-04-2.png)
 
 
   Sayangnya, Rai ketahuan berusaha menjebak turis tersebut dan dikejar oleh
@@ -92,9 +95,6 @@ synopsis: >-
 
 
   # Cuci Uang
-
-
-  ![](/src/content/media/ARCHETYPE-pernak_pernik-03.png)
 
 
   Marini dan Agung pun dipanggil datang setelah nenek mukti dibawa ke kantor
@@ -111,11 +111,14 @@ synopsis: >-
   Hotel Bali Beach di mana Wayan Trinada sedang berkampanye.
 
 
+  ![](/public/media/ARCHETYPE-pernak_pernik-03.png)
+
+
   Mereka bekerja sama untuk mempermalukan Trinada, dengan Rai perform sebuah
   lelucon yang mengungkap Trinada di depan publik.
 
 
-  ![](/src/content/media/ARCHETYPE-pernak_pernik-07.png)
+  ![](/public/media/ARCHETYPE-pernak_pernik-07.png)
 
 
   Ia kemudian menyerahkan diri kepada polisi atas tindakannya sendiri, memilih
