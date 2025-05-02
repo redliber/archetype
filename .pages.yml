@@ -58,7 +58,7 @@ content:
         type : select
         options :
           multiple : true
-          values : [Philosophy, Psychology, Crime, History, Sci-Fi, Politics, Alchemy, Religious, Legends, Young Adult, Action, Espionage, Drama, Family, Coming-of-age, Biography, Horror, Romance, Fantasy, Zombie, Thriller]
+          values : [Philosophy, Psychology, Crime, History, Sci-Fi, Politics, Alchemy, Religious, Legends, Young Adult, Action, Espionage, Drama, Family, Coming-of-age, Biography, Horror, Romance, Fantasy, Zombie, Thriller, Comedy]
       - name : synopsis
         label : Synopsis
         type : rich-text
