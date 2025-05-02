@@ -150,7 +150,7 @@ function SynopsisSection({ total, synopsisSection, index, siteOrigin }: { synops
             if (item[0] === '!') {
               const src = 'archetype' + item.slice(4, item.length-1).replace('public/', '')
               const absoluteUrl = new URL(src, siteOrigin).toString();
-              console.log('Image ==> ', absoluteUrl)
+              // console.log('Image ==> ', absoluteUrl)
               return (
                 <img src={ absoluteUrl } className="w-full"/>
               )

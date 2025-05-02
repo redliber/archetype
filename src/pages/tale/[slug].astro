@@ -5,9 +5,12 @@ import Hero from '../../components/ui/Hero';
 import Caption from '../../components/ui/Caption';
 
 import '../../assets/global.css'
+
 import Title from '../../components/sections/Title';
 import SideBar from '../../components/sections/SideBar';
 import Synopsis from '../../components/sections/Synopsis';
+import Strength from '../../components/sections/Strength';
+
 import CaptionAnim from '../../components/ui/CaptionAnim';
 import SectionFadeIn from '../../components/animation/SectionFadeIn';
 
@@ -47,6 +50,8 @@ synopsis.split('\n').filter((line) => line.trim() !== "").forEach((line) => {
     synopsisArray[synopsisArray.length - 1].body.push(line.trim())
   }
 })
+
+const strengthArray = strength.split('\n').filter((line) => line.trim() !== "")
 
 const coverPublicRemoved = 'archetype' + cover.replace('public/', '')
 
@@ -110,24 +115,20 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
                         </div>
                     </div>
 
-                    <div class="py-40 my-96">
-                        <div
-                            id="characters"
-                            data-section-id="characters"
-                            >
-                            <Caption client:load text={premise}/>
-                        </div>
+
+                    <div class="px-24">
+                        <Caption text='fade out.'
+                            duration={0.5}
+                            client:load className="text-9xl"/>
                     </div>
 
-                    <div class="py-40 my-96">
+
+                    <div class="pt-40 mt-96">
                         <div
                             id="strength"
                             data-section-id="strength"
                             >
-                                <p>
-                                    {JSON.stringify(strength)}
-
-                                </p>
+                                <Strength client:load strength={strengthArray}/>
                         </div>
                     </div>
                 </div>

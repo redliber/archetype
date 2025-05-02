@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function SideBar ({slug, sitePath} : {slug: string, sitePath?:string}) {
-    const content = ['premise', 'synopsis', 'characters', 'strengths']
+    const content = ['premise', 'synopsis', 'strength']
     const [useAffiliation, setAffiliation] = useState('')
 
     const [activeSection, setActiveSection] = useState('');
@@ -44,7 +44,7 @@ export default function SideBar ({slug, sitePath} : {slug: string, sitePath?:str
     }, []);
 
     useEffect(() => {
-        console.log('Current Section --> ', activeSection)
+        // console.log('Current Section --> ', activeSection)
     }, [activeSection])
 
 
