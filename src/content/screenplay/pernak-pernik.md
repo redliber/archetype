@@ -288,5 +288,16 @@ synopsis: >-
   Ia kemudian menyerahkan diri kepada polisi atas tindakannya sendiri, memilih
   rehabilitasi daripada penyangkalan, bertujuan untuk memulai hidup baru.
 strength: >-
-  ""
+  Petualangan ajaib dengan hiruk-pikuk romansa, keluarga, dan perjuangan melawan
+  adiksi.
+
+
+  Menyentuh budaya turisme Bali yang, paradoxically, bertentangan dengan
+  identitas diri.
+
+
+  Kemegahan pemandangan dan budaya yang mendunia.
+
+
+  "Now You See Me" versi Indonesia—dan lebih realistis.
 ---
