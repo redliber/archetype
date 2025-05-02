@@ -19,7 +19,7 @@ synopsis: >-
 
 
   Kehidupan mereka yang tampak ideal runtuh saat putri mereka, IRIS, lahir
-  dengan cerebral palsy.![](/src/content/media/ARCHETYPE-puspa-02.jpeg)
+  dengan cerebral palsy.
 
 
   ![](/public/media/ARCHETYPE-puspa-02.jpeg)

@@ -28,9 +28,6 @@ synopsis: >-
   sekolah, namun Rai tahu bahwa Arya lebih tertarik menggoda turis bule.
 
 
-  ![](/src/content/media/ARCHETYPE-pernak_pernik-05.png)
-
-
   ![](/public/media/ARCHETYPE-pernak_pernik-05.png)
 
 

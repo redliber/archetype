@@ -116,9 +116,6 @@ synopsis: >-
   mendorong umat berpartisipasi.
 
 
-  ![](/src/content/media/ARCHETYPE-jubah-01.png)
-
-
   ![](/public/media/ARCHETYPE-jubah-01.png)
 
 
@@ -130,9 +127,6 @@ synopsis: >-
 
   David panik, berdoa, namun pintu tetap terkunci. Jubah Merah menuntut setetes
   darah pendosa terbesar di kapel agar berhenti mengganggu.
-
-
-  ![](/src/content/media/ARCHETYPE-jubah-02.png)
 
 
   ![](/public/media/ARCHETYPE-jubah-02.png)
@@ -172,17 +166,11 @@ synopsis: >-
   ![](/public/media/ARCHETYPE-jubah-04.png)
 
 
-  ![](/src/content/media/ARCHETYPE-jubah-03.png)
-
-
   Yakobus curiga melihat darah di bilik pengakuan dosa. David, putus asa,
   mencuri darah Risanto, tapi gagal lagi. Umat mulai menjauh dari David yang
   kini tampak sebagai sosok yang unhinged, dan Risanto mengungkap masa lalu
   David: ia menyebabkan kematian mantan istrinya, Hannah, dalam sebuah
   kecelakaan mobil.
-
-
-  ![](/src/content/media/ARCHETYPE-jubah-04.png)
 
 
   ![](/public/media/ARCHETYPE-jubah-03.png)
@@ -211,9 +199,6 @@ synopsis: >-
 
   Hannah, berjubah merah, memaafkan, tapi menuntut penitensi. Mobil yang sama
   muncul. David diminta memenuhi janjinya.
-
-
-  ![](/src/content/media/ARCHETYPE-jubah-05.png)
 
 
   ![](/public/media/ARCHETYPE-jubah-05.png)
