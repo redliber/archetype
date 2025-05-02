@@ -108,9 +108,9 @@ strength: >-
 
   Market romance thriller yang mulai merajarela.
 colors:
-  primary: liber-red
-  hover: liber-red-2
-  active: liber-red-3
-  secondary: liber-beige
-  accent: liber-brown
+  primary: violet-600
+  hover: violet-800
+  active: violet-950
+  secondary: violet-300
+  accent: slate-950
 ---

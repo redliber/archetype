@@ -3,12 +3,12 @@
 import { useAnimate, useInView } from "framer-motion"
 import { useEffect } from "react"
 
-export default function Caption({text, duration = 2, delay = 0.5, className} : {text: string, duration?: number, delay?: number, className?:string}) {
+export default function Caption({text, duration = 2, delay = 0.5, className, colors} : {text: string, duration?: number, delay?: number, className?:string, colors:any}) {
     const textArr = text.match(/(\S+|\s+)/g) || []
-    const fontSettings = className ? className : `  text-liber-brown text-6xl `
+    const fontSettings = className ? className : `  text-6xl `
 
-    return (
-        <div className={` flex flex-wrap font-bold ` + fontSettings}>
+  return (
+    <div className={` flex flex-wrap font-bold ` + fontSettings}>
             {
                 textArr.map((item) => {
                     if (item === " ") {
@@ -18,7 +18,7 @@ export default function Caption({text, duration = 2, delay = 0.5, className} : {
                     }
 
                     return (
-                        <CaptionSpan duration={duration} delay={delay} word={item}/>
+                        <CaptionSpan duration={duration} delay={delay} word={item} colors={colors}/>
                     )
                 })
             }
@@ -26,7 +26,7 @@ export default function Caption({text, duration = 2, delay = 0.5, className} : {
     )
 }
 
-function CaptionSpan({word, duration, delay}: {word:string, duration: number, delay: number}) {
+function CaptionSpan({word, duration, delay, colors}: {word:string, duration: number, delay: number, colors:any}) {
     const [scope, animate] = useAnimate()
     const isInView = useInView(scope)
 
@@ -47,10 +47,12 @@ function CaptionSpan({word, duration, delay}: {word:string, duration: number, de
         <>
             <p
                 ref={scope}
-                className="
-                  hover:translate-y-1 hover:text-liber-beige hover:bg-liber-red
+                className={`
+                  hover:translate-y-1
+                  text-${colors.primary}
+                  hover:text-${colors.secondary} hover:bg-liber-red
                   active:bg-liber-red-3 cursor-none
-                  transition-all duration-100 tracking-tighter"
+                  transition-all duration-100 tracking-tighter`}
                 style={{
                     opacity: 0,
                     filter: 'blur(20px)'

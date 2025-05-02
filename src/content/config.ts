@@ -9,7 +9,14 @@ const screenplayCollection = defineCollection({
     genre: z.array(z.string()),
     synopsis: z.string(),
     characters: z.string(),
-    strength: z.string()
+    strength: z.string(),
+    colors: z.object({
+      primary: z.string(),
+      hover: z.string(),
+      active: z.string(),
+      secondary: z.string(),
+      accent: z.string(),
+    })
   }),
 });
 

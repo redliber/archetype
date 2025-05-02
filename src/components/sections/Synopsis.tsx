@@ -6,14 +6,16 @@ import { useEffect, useRef, useState } from "react"
 import { useIntersectionObserver, useWindowScroll, useWindowSize } from "@uidotdev/usehooks"
 import { lerp, scaleValue } from "../../utils/kit"
 
-export default function Synopsis({ synopsis, siteOrigin }: { synopsis: {heading: string, body: string[]}[], siteOrigin:any }) {
+export default function Synopsis({ synopsis, siteOrigin, colors }: { synopsis: {heading: string, body: string[]}[], siteOrigin:any, colors:any }) {
   return (
     <div className="w-full">
       {
         synopsis.map((item, index) => {
           return (
             <div className="my-[50vh]">
-              <SynopsisSection siteOrigin={siteOrigin} total={ synopsis.length } index={index} synopsisSection={item}/>
+              <SynopsisSection
+                colors={colors}
+                siteOrigin={siteOrigin} total={ synopsis.length } index={index} synopsisSection={item}/>
             </div>
           )
         })
@@ -22,7 +24,7 @@ export default function Synopsis({ synopsis, siteOrigin }: { synopsis: {heading:
   )
 }
 
-function SynopsisSection({ total, synopsisSection, index, siteOrigin }: { synopsisSection: { heading: string, body: string[] }, index: number, total: number, siteOrigin: any }) {
+function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors }: { synopsisSection: { heading: string, body: string[] }, index: number, total: number, siteOrigin: any, colors:any }) {
   const {heading, body} = synopsisSection
 
   const [headingScope, headingAnimate] = useAnimate()
@@ -157,7 +159,9 @@ function SynopsisSection({ total, synopsisSection, index, siteOrigin }: { synops
             }
             return (
               <div className="py-64 px-20">
-                <Caption duration={1.5} text={item }/>
+                <Caption
+                  colors={colors}
+                  duration={1.5} text={item }/>
               </div>
             )
           })

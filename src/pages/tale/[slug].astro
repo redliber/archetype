@@ -24,7 +24,8 @@ export async function getStaticPaths() {
         cover: item.data.cover,
         synopsis: item.data.synopsis,
         characters: item.data.characters,
-        strength: item.data.strength
+        strength: item.data.strength,
+        colors: item.data.colors
     }))
     return screenplaysPaths.map((screenplay) => ({
         params: {slug: screenplay.slug},
@@ -35,7 +36,7 @@ export async function getStaticPaths() {
 
 const { screenplay } = Astro.props;
 const { slug } = Astro.params;
-const { title, premise, genre, synopsis, cover, strength} = screenplay
+const { title, premise, genre, synopsis, cover, strength, colors} = screenplay
 
 const siteOrigin = Astro.url.origin
 const newPath = `archetype/affiliation/`
@@ -56,6 +57,7 @@ const strengthArray = strength.split('\n').filter((line) => line.trim() !== "")
 const coverPublicRemoved = 'archetype' + cover.replace('public/', '')
 
 const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
+
 ---
 
 <Layout>
@@ -67,7 +69,7 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
                         <div class="p-10 w-full text-right">
                             <a href="/archetype" class="font-heading font-black hover:text-liber-red-2 transition-all duration-100 ease-in-out ">archetype</a>
                         </div>
-                        <SideBar sitePath={absoluteUrl} slug={slug} client:load />
+                        <SideBar colors={colors} sitePath={absoluteUrl} slug={slug} client:load />
                     </div>
                 </SectionFadeIn>
             </div>
@@ -78,7 +80,9 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
                         <div class="flex flex-col justify-end">
                             {
                                 genre.map((item) => (
-                                    <p class="text-liber-red font-black text-2xl">
+                                    <p
+                                        class={` font-black text-2xl ` + `text-${colors.primary}`}
+                                        >
                                         {item}
                                     </p>
                                 ))
@@ -86,7 +90,7 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
                         </div>
                     </SectionFadeIn>
                 </div>
-                <Title client:load title={title}/>
+                <Title client:load title={title} colors={colors}/>
                 <div class="w-full">
                     {
                         newCoverImgPath &&
@@ -101,7 +105,7 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
                             id="premise"
                             data-section-id="premise"
                             >
-                            <Caption className='text-8xl text-liber-red-2 ' client:load text={premise}/>
+                            <Caption colors={colors} className={`text-8xl`} client:load text={premise}/>
                         </div>
                     </div>
 
@@ -111,13 +115,19 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
                             id="synopsis"
                             data-section-id="synopsis"
                             >
-                                <Synopsis client:load siteOrigin={siteOrigin} synopsis={synopsisArray}/>
+                                <Synopsis
+                                    client:load
+                                    colors={colors}
+                                    siteOrigin={siteOrigin}
+                                    synopsis={synopsisArray}/>
                         </div>
                     </div>
 
 
                     <div class="px-24">
-                        <Caption text='fade out.'
+                        <Caption
+                            colors={colors}
+                            text='fade out.'
                             duration={0.5}
                             client:load className="text-9xl"/>
                     </div>
@@ -128,7 +138,10 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
                             id="strength"
                             data-section-id="strength"
                             >
-                                <Strength client:load strength={strengthArray}/>
+                                <Strength
+                                    client:load
+                                    colors={colors}
+                                    strength={strengthArray}/>
                         </div>
                     </div>
                 </div>

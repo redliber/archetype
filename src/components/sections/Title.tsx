@@ -7,7 +7,7 @@ import { useAnimate } from "framer-motion";
 import { lerp, scaleValue } from "../../utils/kit";
 
 
-export default function Title({title}: {title: string}) {
+export default function Title({title, colors}: {title: string, colors:any}) {
     const [{ x, y }, scrollTo] = useWindowScroll();
     const {width, height} = useWindowSize();
     const [useHeroSize, setHeroSize] = useState(1)
@@ -61,12 +61,13 @@ export default function Title({title}: {title: string}) {
                     }}
                 >
                   <p
-                      className="text-8xl font-black font-heading tracking-tighter w-full
-                      hover:text-liber-red-2
-                      active:text-liber-brown active:scale-90
+                      className={`text-8xl font-black font-heading tracking-tighter w-full
+                      text-${colors.primary}
+                      hover:text-${colors.hover}
+                      active:text-${colors.active} active:scale-90
                       hover:scale-125 hover:rotate-12
                       transition-all duration-300
-                      ">{title}
+                      `}>{title}
                   </p>
                 </div>
             </div>

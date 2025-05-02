@@ -219,4 +219,10 @@ strength: |-
   Style dan estetik "Monster" baru ditumpu horror claustrophobic.
 
   A24 versi Indonesia.
+colors:
+  primary: liber-red
+  hover: liber-red-2
+  active: liber-red-3
+  secondary: liber-beige
+  accent: liber-brown
 ---

@@ -300,4 +300,10 @@ strength: >-
 
 
   "Now You See Me" versi Indonesia—dan lebih realistis.
+colors:
+  primary: liber-red
+  hover: liber-red-2
+  active: liber-red-3
+  secondary: liber-beige
+  accent: liber-brown
 ---

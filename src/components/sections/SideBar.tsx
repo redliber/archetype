@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function SideBar ({slug, sitePath} : {slug: string, sitePath?:string}) {
+export default function SideBar({ slug, sitePath, colors }: { slug: string, sitePath?: string, colors: any }) {
     const content = ['premise', 'synopsis', 'strength']
     const [useAffiliation, setAffiliation] = useState('')
 

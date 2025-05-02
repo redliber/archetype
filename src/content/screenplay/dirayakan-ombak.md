@@ -155,4 +155,10 @@ strength: |-
   Feel-Good movie yang sangat dibutuhkan di tengah kekacauan dunia.
 
   Setting perkapalan yang sinematik dan menyentuh insting kebebasan.
+colors:
+  primary: liber-red
+  hover: liber-red-2
+  active: liber-red-3
+  secondary: liber-beige
+  accent: liber-brown
 ---
