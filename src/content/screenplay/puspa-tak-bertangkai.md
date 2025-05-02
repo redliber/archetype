@@ -4,7 +4,7 @@ premise: Di balik fasad keluarga sempurna seorang politisi, seorang ibu dengan
   rasa kasih sayang ikhlas, harus berjuang melawan kekerasan dan manipulasi
   suaminya untuk melindungi anak-anaknya yang berkebutuhan khusus, hingga sebuah
   pengkhianatan tragis memaksanya mengambil tindakan drastis.
-cover: /src/content/media/ARCHETYPE-puspa-cover.jpg
+cover: /public/media/ARCHETYPE-puspa-cover.jpg
 genre:
   - Romance
   - Drama
@@ -19,10 +19,10 @@ synopsis: >-
 
 
   Kehidupan mereka yang tampak ideal runtuh saat putri mereka, IRIS, lahir
-  dengan cerebral palsy.
+  dengan cerebral palsy.![](/src/content/media/ARCHETYPE-puspa-02.jpeg)
 
 
-  ![](/src/content/media/ARCHETYPE-puspa-02.jpeg)
+  ![](/public/media/ARCHETYPE-puspa-02.jpeg)
 
 
   Benno, tak bisa menerima “cacat” anaknya, menyalahkan Puspa dan
@@ -31,7 +31,7 @@ synopsis: >-
   yang berketerbelakangan mental.
 
 
-  ![](/src/content/media/ARCHETYPE-puspa-03.jpeg)
+  ![](/public/media/ARCHETYPE-puspa-03.jpeg)
 
 
   Ketika putra mereka, ALE, juga didiagnosis serupa, kemarahan Benno makin
@@ -60,7 +60,7 @@ synopsis: >-
   kekerasan, mengancam pemenuhan kebutuhan hidup dan fasilitas anak-anaknya.
 
 
-  ![](/src/content/media/ARCHETYPE-puspa-04.jpeg)
+  ![](/public/media/ARCHETYPE-puspa-04.jpeg)
 
 
   Rosa, awalnya mendukung Benno, mulai muak dengan manipulasi suaminya dan
@@ -84,7 +84,7 @@ synopsis: >-
   penuh kasih sayang.
 
 
-  ![](/src/content/media/ARCHETYPE-puspa-01.jpeg)
+  ![](/public/media/ARCHETYPE-puspa-01.jpeg)
 
 
   Lewat bukunya yang ia sedang tulis, “Puspa tak Bertangkai”, ia mengungkap
