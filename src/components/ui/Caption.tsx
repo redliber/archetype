@@ -3,11 +3,12 @@
 import { useAnimate, useInView } from "framer-motion"
 import { useEffect } from "react"
 
-export default function Caption({text, duration = 2, delay = 0.5} : {text: string, duration?: number, delay?: number}) {
+export default function Caption({text, duration = 2, delay = 0.5, className} : {text: string, duration?: number, delay?: number, className?:string}) {
     const textArr = text.match(/(\S+|\s+)/g) || []
+    const fontSettings = className ? className : `  text-liber-brown text-6xl `
 
     return (
-        <div className="flex flex-wrap text-6xl font-bold text-liber-brown">
+        <div className={` flex flex-wrap font-bold ` + fontSettings}>
             {
                 textArr.map((item) => {
                     if (item === " ") {

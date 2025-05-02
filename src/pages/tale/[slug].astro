@@ -46,6 +46,7 @@ synopsis.split('\n').filter((line) => line.trim() !== "").forEach((line) => {
   }
 })
 
+// console.log('Synopsis Array --> ', synopsis)
 ---
 
 <Layout>
@@ -91,7 +92,7 @@ synopsis.split('\n').filter((line) => line.trim() !== "").forEach((line) => {
                             id="premise"
                             data-section-id="premise"
                             >
-                            <Caption client:load text={premise}/>
+                            <Caption className='text-8xl text-liber-red-2 ' client:load text={premise}/>
                         </div>
                     </div>
 

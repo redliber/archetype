@@ -147,6 +147,13 @@ function SynopsisSection({ total, synopsisSection, index }: { synopsisSection: {
       <div className="">
         {
           body.map((item, index) => {
+            if (item[0] === '!') {
+              const src = '../../..' + item.slice(4, item.length-1)
+              console.log('Image ==> ', src)
+              return (
+                <img src={ src } className="w-full"/>
+              )
+            }
             return (
               <div className="py-64 px-20">
                 <Caption duration={1.5} text={item }/>
