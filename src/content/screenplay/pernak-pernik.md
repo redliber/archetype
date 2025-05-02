@@ -6,6 +6,7 @@ premise: Rai, seorang gadis remaja Bali kleptomaniak yang ditantang oleh
   mengembalikan tiga patung curian yang sakral di Bali ke tempat asalnya dengan
   memulai road-trip ke lokasi-lokasi turisme Bali ditemani neneknya juga Arya
   gebetannya dengan segala rintangannya.
+cover: /src/content/media/ARCHETYPE-pernak_pernik-cover.png
 genre:
   - Drama
   - Coming-of-age
