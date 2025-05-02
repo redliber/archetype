@@ -17,7 +17,7 @@ synopsis: >-
   tidak dikenal, yang ternyata dari AURA, mantan SMA-nya.
 
 
-  ![](/src/content/media/ARCHETYPE-aura-01.png)
+  ![](/public/media/ARCHETYPE-aura-01.png)
 
 
   Pernikahan Pradipta dengan MARIA stabil namun sedikit monoton; Karena itu,
@@ -28,7 +28,7 @@ synopsis: >-
   juga saat anak perempuannya, MAWAR, akan lulus.
 
 
-  ![](/src/content/media/ARCHETYPE-aura-02.jpeg)
+  ![](/public/media/ARCHETYPE-aura-02.jpeg)
 
 
   # Ranjang Murni dan Malam Birahi
@@ -42,7 +42,7 @@ synopsis: >-
   ternyata sedang dirayu Aura.
 
 
-  ![](/src/content/media/aura-putrimarino.jpg)
+  ![](/public/media/aura-putrimarino.jpg)
 
 
   Pradipta menjadi protektif saat melihat Mawar bersama pacarnya, DANIEL, dan
@@ -72,7 +72,7 @@ synopsis: >-
   adalah kerjaan Daniel.
 
 
-  ![](/src/content/media/ARCHETYPE-aura-04.jpeg)
+  ![](/public/media/ARCHETYPE-aura-04.jpeg)
 
 
   Pradipta meluap. Mawar dan Maria membela Daniel, membuat Pradipta merasa
@@ -88,7 +88,7 @@ synopsis: >-
   Pradipta perkosa karena postur dan lekuk badan yang mirip dengan Aura.
 
 
-  ![](/src/content/media/ARCHETYPE-aura-03.jpeg)
+  ![](/public/media/ARCHETYPE-aura-03.jpeg)
 
 
   Balas dendam Aura berhasil, Pradipta dijadikan prasangka pemerkosaan anaknya
