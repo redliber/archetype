@@ -18,6 +18,9 @@ synopsis: >-
   naik motor untuk delivery orderan dari GoFood.
 
 
+  ![](/public/media/ARCHETYPE-raya-01.jpg)
+
+
   Anak-anak kuliah yang SKS (Sistem Kebut Semalam), keluarga malas masak, artis
   di set shooting film. Semua restoran dan pelanggan ramah dengan Raya berkat
   senyuman dan pembawaan diri optimis.
