@@ -25,7 +25,7 @@ export default function SideBar ({slug, sitePath} : {slug: string, sitePath?:str
             }
             });
         },
-        { threshold: 0.25 } // Trigger when 50% of the section is visible
+        { threshold: 0.01 }
         );
 
         // Observe each section
@@ -66,6 +66,7 @@ export default function SideBar ({slug, sitePath} : {slug: string, sitePath?:str
                             hover:font-black hover:translate-x-2
                             active:text-liber-brown
                             origin-right
+                            font-heading
                             transition-all duration-200
                             ` + (activeSection === item ? ` text-orange-100 font-black translate-x-2` : ` `)}>
                             <a

@@ -7,6 +7,7 @@ import Caption from '../../components/ui/Caption';
 import '../../assets/global.css'
 import Title from '../../components/sections/Title';
 import SideBar from '../../components/sections/SideBar';
+import Synopsis from '../../components/sections/Synopsis';
 import CaptionAnim from '../../components/ui/CaptionAnim';
 import SectionFadeIn from '../../components/animation/SectionFadeIn';
 
@@ -34,6 +35,16 @@ const { title, premise, genre, synopsis, cover} = screenplay
 const siteOrigin = Astro.url.origin
 const newPath = `archetype/affiliation/`
 const absoluteUrl = new URL(newPath, siteOrigin).toString();
+
+const synopsisArray: {heading: string, body: string[]}[] = []
+synopsis.split('\n').filter((line) => line.trim() !== "").forEach((line) => {
+  if (/^#{1,6}\s*/.test(line.trim())) {
+    const match = line.trim().match(/^#{1,6}\s*(.+)/)
+    synopsisArray.push({heading: match ? match[1] : "", body: []})
+  } else {
+    synopsisArray[synopsisArray.length - 1].body.push(line.trim())
+  }
+})
 
 ---
 
@@ -72,48 +83,44 @@ const absoluteUrl = new URL(newPath, siteOrigin).toString();
                         <img src={cover} class="w-full"/>
                     }
                 </div>
-                <div class="p-20">
-                    <div class="flex flex-col gap-12 my-80">
-                        <div class="py-40 my-96">
-                            <div
-                                id="premise"
-                                data-section-id="premise"
-                                >
-                                <Caption client:load text={premise}/>
-                                <!-- <SectionFadeIn client:load duration={4} delay={2}>
-                                </SectionFadeIn> -->
-                            </div>
+                <div class="flex flex-col gap-12">
+
+
+                    <div class="py-24 mb-96 px-20">
+                        <div
+                            id="premise"
+                            data-section-id="premise"
+                            >
+                            <Caption client:load text={premise}/>
                         </div>
+                    </div>
 
 
-                        <div class="py-40 my-96">
-                            <div
-                                id="synopsis"
-                                data-section-id="synopsis"
-                                >
-                                <Caption client:load text={premise}/>
-                            </div>
+                    <div class="py-40 my-96">
+                        <div
+                            id="synopsis"
+                            data-section-id="synopsis"
+                            >
+                                <Synopsis client:load synopsis={synopsisArray}/>
                         </div>
+                    </div>
 
-                        <div class="py-40 my-96">
-                            <div
-                                id="characters"
-                                data-section-id="characters"
-                                >
-                                <Caption client:load text={premise}/>
-                            </div>
+                    <div class="py-40 my-96">
+                        <div
+                            id="characters"
+                            data-section-id="characters"
+                            >
+                            <Caption client:load text={premise}/>
                         </div>
+                    </div>
 
-                        <div class="py-40 my-96">
-                            <div
-                                id="strengths"
-                                data-section-id="strengths"
-                                >
-                                <Caption client:load text={premise}/>
-                            </div>
+                    <div class="py-40 my-96">
+                        <div
+                            id="strengths"
+                            data-section-id="strengths"
+                            >
+                            <Caption client:load text={premise}/>
                         </div>
-
-
                     </div>
                 </div>
 

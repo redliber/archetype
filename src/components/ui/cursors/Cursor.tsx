@@ -53,7 +53,7 @@ export default function Cursor() {
     <div
       className={`
         fixed cursor-none pointer-events-none focus:pointer-events-none
-        z-50 rounded-full 
+        z-[9999] rounded-full
         mix-blend-exclusion
         bg-liber-red-2
         origin-center

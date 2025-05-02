@@ -3,9 +3,9 @@
 import { useAnimate, useInView } from "framer-motion"
 import { useEffect } from "react"
 
-export default function Caption({text} : {text: string}) {
+export default function Caption({text, duration = 2, delay = 0.5} : {text: string, duration?: number, delay?: number}) {
     const textArr = text.match(/(\S+|\s+)/g) || []
-    
+
     return (
         <div className="flex flex-wrap text-6xl font-bold text-liber-brown">
             {
@@ -17,7 +17,7 @@ export default function Caption({text} : {text: string}) {
                     }
 
                     return (
-                        <CaptionSpan word={item}/>
+                        <CaptionSpan duration={duration} delay={delay} word={item}/>
                     )
                 })
             }
@@ -25,7 +25,7 @@ export default function Caption({text} : {text: string}) {
     )
 }
 
-function CaptionSpan({word}: {word:string}) {
+function CaptionSpan({word, duration, delay}: {word:string, duration: number, delay: number}) {
     const [scope, animate] = useAnimate()
     const isInView = useInView(scope)
 
@@ -35,9 +35,9 @@ function CaptionSpan({word}: {word:string}) {
                 opacity: 1,
                 filter: 'blur(0px)'
             }, {
-                duration: 2,
+                duration: duration,
                 type: 'spring',
-                delay: 0.5
+                delay: delay
             })
         }
     })
@@ -46,6 +46,10 @@ function CaptionSpan({word}: {word:string}) {
         <>
             <p
                 ref={scope}
+                className="
+                  hover:translate-y-1 hover:text-liber-beige hover:bg-liber-red
+                  active:bg-liber-red-3 cursor-none
+                  transition-all duration-100 tracking-tighter"
                 style={{
                     opacity: 0,
                     filter: 'blur(20px)'

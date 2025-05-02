@@ -17,7 +17,7 @@ export default function Title({title}: {title: string}) {
     const relativeHeight = y && height ? y/height : 0
 
     useEffect(() => {
-        
+
         const STARTRESIZING = 0.2
         const SCROLLEND = 1
         const SCROLLENDHEROSIZE = 0.25
@@ -46,8 +46,8 @@ export default function Title({title}: {title: string}) {
         <>
             <div className="h-[25vh]"></div>
             <div
-                ref={introScope} 
-                className="sticky top-0 py-12 justify-items-end px-24"
+                ref={introScope}
+                className="sticky top-0 py-12 justify-items-end px-24 z-[1000]"
                 style={{
                     opacity: 0,
                     filter: 'blur(30px)'
@@ -60,7 +60,14 @@ export default function Title({title}: {title: string}) {
                         transformOrigin: 'top right',
                     }}
                 >
-                    <Hero className={` font-extrabold text-8xl `} text={title}/>
+                  <p
+                      className="text-8xl font-black font-heading tracking-tighter w-full
+                      hover:text-liber-red-2
+                      active:text-liber-brown active:scale-90
+                      hover:scale-125 hover:rotate-12
+                      transition-all duration-300
+                      ">{title}
+                  </p>
                 </div>
             </div>
             <div className="h-[50vh]"></div>
