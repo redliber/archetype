@@ -217,4 +217,6 @@ strength: |-
   Eksplorasi introspeksi diri dengan drama karakter piluh dan dalam.
 
   Style dan estetik "Monster" baru ditumpu horror claustrophobic.
+
+  A24 versi Indonesia.
 ---
