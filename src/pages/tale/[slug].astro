@@ -46,7 +46,11 @@ synopsis.split('\n').filter((line) => line.trim() !== "").forEach((line) => {
   }
 })
 
-const newCoverImgPath = new URL(cover, siteOrigin).toString()
+const coverPublicRemoved = 'archetype' + cover.replace('public/', '')
+
+const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
+// https://redliber.github.io/public/media/ARCHETYPE-aura-cover-image.png
+// https://redliber.github.io/archetype/media/ARCHETYPE-aura-cover-image.png
 ---
 
 <Layout>
@@ -102,7 +106,7 @@ const newCoverImgPath = new URL(cover, siteOrigin).toString()
                             id="synopsis"
                             data-section-id="synopsis"
                             >
-                                <Synopsis client:load synopsis={synopsisArray}/>
+                                <Synopsis client:load siteOrigin={siteOrigin} synopsis={synopsisArray}/>
                         </div>
                     </div>
 

@@ -6,14 +6,14 @@ import { useEffect, useRef, useState } from "react"
 import { useIntersectionObserver, useWindowScroll, useWindowSize } from "@uidotdev/usehooks"
 import { lerp, scaleValue } from "../../utils/kit"
 
-export default function Synopsis({ synopsis }: { synopsis: {heading: string, body: string[]}[] }) {
+export default function Synopsis({ synopsis, siteOrigin }: { synopsis: {heading: string, body: string[]}[], siteOrigin:any }) {
   return (
     <div className="w-full">
       {
         synopsis.map((item, index) => {
           return (
             <div className="my-[50vh]">
-              <SynopsisSection total={ synopsis.length } index={index} synopsisSection={item}/>
+              <SynopsisSection siteOrigin={siteOrigin} total={ synopsis.length } index={index} synopsisSection={item}/>
             </div>
           )
         })
@@ -22,7 +22,7 @@ export default function Synopsis({ synopsis }: { synopsis: {heading: string, bod
   )
 }
 
-function SynopsisSection({ total, synopsisSection, index }: { synopsisSection: { heading: string, body: string[] }, index: number, total: number }) {
+function SynopsisSection({ total, synopsisSection, index, siteOrigin }: { synopsisSection: { heading: string, body: string[] }, index: number, total: number, siteOrigin: any }) {
   const {heading, body} = synopsisSection
 
   const [headingScope, headingAnimate] = useAnimate()
@@ -148,10 +148,11 @@ function SynopsisSection({ total, synopsisSection, index }: { synopsisSection: {
         {
           body.map((item, index) => {
             if (item[0] === '!') {
-              const src = '../../..' + item.slice(4, item.length-1)
-              console.log('Image ==> ', src)
+              const src = 'archetype' + item.slice(4, item.length-1).replace('public/', '')
+              const absoluteUrl = new URL(src, siteOrigin).toString();
+              console.log('Image ==> ', absoluteUrl)
               return (
-                <img src={ src } className="w-full"/>
+                <img src={ absoluteUrl } className="w-full"/>
               )
             }
             return (
