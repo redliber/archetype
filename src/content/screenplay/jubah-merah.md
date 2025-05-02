@@ -211,4 +211,6 @@ synopsis: >-
 
   Kapel kini kosong, umat menolaknya. David, terobsesi memanggil Hannah,
   akhirnya menggantung diri di bilik pengakuan, ditemukan Yakobus.
+strength: >-
+  ""
 ---

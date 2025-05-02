@@ -287,4 +287,6 @@ synopsis: >-
 
   Ia kemudian menyerahkan diri kepada polisi atas tindakannya sendiri, memilih
   rehabilitasi daripada penyangkalan, bertujuan untuk memulai hidup baru.
+strength: >-
+  ""
 ---

@@ -21,7 +21,7 @@ export async function getStaticPaths() {
         cover: item.data.cover,
         synopsis: item.data.synopsis,
         characters: item.data.characters,
-        strengths: item.data.strengths
+        strength: item.data.strength
     }))
     return screenplaysPaths.map((screenplay) => ({
         params: {slug: screenplay.slug},
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 
 const { screenplay } = Astro.props;
 const { slug } = Astro.params;
-const { title, premise, genre, synopsis, cover} = screenplay
+const { title, premise, genre, synopsis, cover, strength} = screenplay
 
 const siteOrigin = Astro.url.origin
 const newPath = `archetype/affiliation/`
@@ -121,10 +121,13 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
 
                     <div class="py-40 my-96">
                         <div
-                            id="strengths"
-                            data-section-id="strengths"
+                            id="strength"
+                            data-section-id="strength"
                             >
-                            <!-- {JSON.stringify()} -->
+                                <p>
+                                    {JSON.stringify(strength)}
+
+                                </p>
                         </div>
                     </div>
                 </div>

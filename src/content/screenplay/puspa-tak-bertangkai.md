@@ -5,6 +5,8 @@ premise: Di balik fasad keluarga sempurna seorang politisi, seorang ibu dengan
   suaminya untuk melindungi anak-anaknya yang berkebutuhan khusus, hingga sebuah
   pengkhianatan tragis memaksanya mengambil tindakan drastis.
 cover: /public/media/ARCHETYPE-puspa-cover.jpg
+characters: >-
+  ""
 genre:
   - Romance
   - Drama
@@ -90,4 +92,6 @@ synopsis: >-
   Lewat bukunya yang ia sedang tulis, “Puspa tak Bertangkai”, ia mengungkap
   pengorbanan Puspa dan kebenaran kelam di balik fasad politik Benno, menyoroti
   cinta dan keadilan yang tersembunyi.
+strength: >-
+  ""
 ---
