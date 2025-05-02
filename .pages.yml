@@ -53,6 +53,9 @@ content:
         type : image
         options :
           path : cover
+      - name : characters
+        label : Characters
+        type : rich-text
       - name : genre
         label : Genre
         type : select
