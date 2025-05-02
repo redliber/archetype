@@ -1,9 +1,9 @@
 ---
 title: Dirayakan Ombak
-premise: Meditasi sinematik seorang single mother yang hidup berdua dengan jiwa
-  optimis dalam kesederhanaan bersama anak perempuannya dekat Pelabuhan Tanjung
-  Priok. Kerja sebagai GoFood delivery, ia rindu meraungi lautan sebagai
-  nahkoda, namun terbebani tanggung jawab hutang mendiang suaminya.
+premise: Meditasi sinematik seorang single mother yang hidup dengan jiwa optimis
+  dalam kesederhanaan bersama anak perempuannya dekat Pelabuhan Tanjung Priok.
+  Kerja sebagai GoFood delivery, ia rindu meraungi lautan sebagai nahkoda, namun
+  terbebani tanggung jawab hutang mendiang suaminya.
 cover: /public/media/ARCHETYPE-raya-cover.jpg
 characters: "''"
 genre:
