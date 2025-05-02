@@ -8,6 +8,8 @@ const screenplayCollection = defineCollection({
     cover: z.string(),
     genre: z.array(z.string()),
     synopsis: z.string(),
+    characters: z.string(),
+    strengths: z.string()
   }),
 });
 
@@ -23,4 +25,3 @@ export const collections = {
   screenplay: screenplayCollection,
   affiliation: affiliationCollection
 };
-

@@ -19,7 +19,9 @@ export async function getStaticPaths() {
         premise: item.data.premise,
         genre: item.data.genre,
         cover: item.data.cover,
-        synopsis: item.data.synopsis
+        synopsis: item.data.synopsis,
+        characters: item.data.characters,
+        strengths: item.data.strengths
     }))
     return screenplaysPaths.map((screenplay) => ({
         params: {slug: screenplay.slug},
@@ -49,8 +51,6 @@ synopsis.split('\n').filter((line) => line.trim() !== "").forEach((line) => {
 const coverPublicRemoved = 'archetype' + cover.replace('public/', '')
 
 const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
-// https://redliber.github.io/public/media/ARCHETYPE-aura-cover-image.png
-// https://redliber.github.io/archetype/media/ARCHETYPE-aura-cover-image.png
 ---
 
 <Layout>
@@ -124,7 +124,7 @@ const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
                             id="strengths"
                             data-section-id="strengths"
                             >
-                            <Caption client:load text={premise}/>
+                            <!-- {JSON.stringify()} -->
                         </div>
                     </div>
                 </div>
