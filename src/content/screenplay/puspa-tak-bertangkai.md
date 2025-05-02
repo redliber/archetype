@@ -5,8 +5,7 @@ premise: Di balik fasad keluarga sempurna seorang politisi, seorang ibu dengan
   suaminya untuk melindungi anak-anaknya yang berkebutuhan khusus, hingga sebuah
   pengkhianatan tragis memaksanya mengambil tindakan drastis.
 cover: /public/media/ARCHETYPE-puspa-cover.jpg
-characters: >-
-  ""
+characters: '""'
 genre:
   - Romance
   - Drama
@@ -93,5 +92,12 @@ synopsis: >-
   pengorbanan Puspa dan kebenaran kelam di balik fasad politik Benno, menyoroti
   cinta dan keadilan yang tersembunyi.
 strength: >-
-  ""
+  Kisah abuse yang makin diberatkan tanggung jawab pada anak berketerbelakangan.
+
+
+  Menggenggam market Indonesia yang terpaku perjuangan istri.
+
+
+  Membantu menyebar awareness tentang cinta yang ikhlas dan bedanya hidup
+  memilikki Cerebral Palsy.
 ---
