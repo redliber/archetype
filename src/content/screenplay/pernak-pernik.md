@@ -10,6 +10,7 @@ cover: /src/content/media/ARCHETYPE-pernak_pernik-cover.png
 genre:
   - Drama
   - Coming-of-age
+  - Comedy
 synopsis: >-
   # Kedatangan Nenek Perantau
 
