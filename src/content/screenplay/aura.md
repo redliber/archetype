@@ -4,7 +4,7 @@ premise: Seorang suami berjiwa lemah yang mendambakan kontrol dan kesegaran di
   ranjang pernikahannya yang monoton, didatangi mantannya sewaktu SMA yang
   tampaknya ingin merayunya ke ranjang. Curiga dan tertarik, ia tidak sadar akan
   tujuan sesungguhnya, mengungkap rahasia gelap di masa lalu mereka.
-cover: /src/content/media/aura-home.png
+cover: /src/content/media/ARCHETYPE-aura-cover-image.png
 genre:
   - Thriller
   - Drama
@@ -17,12 +17,18 @@ synopsis: >-
   tidak dikenal, yang ternyata dari AURA, mantan SMA-nya.
 
 
+  ![](/src/content/media/ARCHETYPE-aura-01.png)
+
+
   Pernikahan Pradipta dengan MARIA stabil namun sedikit monoton; Karena itu,
   Pradipta merasa sedikit terbawa rayuan Aura.
 
 
   Aura menyarankan reuni bertepatan dengan lulusan sekolah mereka dulu, yang
   juga saat anak perempuannya, MAWAR, akan lulus.
+
+
+  ![](/src/content/media/ARCHETYPE-aura-02.jpeg)
 
 
   # Ranjang Murni dan Malam Birahi
@@ -34,6 +40,9 @@ synopsis: >-
 
   Sementara itu, teks-teks dari Aura semakin sugestif. Teman lama lainnya juga
   ternyata sedang dirayu Aura.
+
+
+  ![](/src/content/media/aura-putrimarino.jpg)
 
 
   Pradipta menjadi protektif saat melihat Mawar bersama pacarnya, DANIEL, dan
@@ -63,6 +72,9 @@ synopsis: >-
   adalah kerjaan Daniel.
 
 
+  ![](/src/content/media/ARCHETYPE-aura-04.jpeg)
+
+
   Pradipta meluap. Mawar dan Maria membela Daniel, membuat Pradipta merasa
   kehilangan kontrol.
 
@@ -74,6 +86,9 @@ synopsis: >-
   Tidak tahan, Pradipta bergegas bersetubuh dengannya, tidak sadar bahwa
   ternyata, wanita tidak berdaya itu adalah anaknya sendiri, Mawar, yang baru
   Pradipta perkosa karena postur dan lekuk badan yang mirip dengan Aura.
+
+
+  ![](/src/content/media/ARCHETYPE-aura-03.jpeg)
 
 
   Balas dendam Aura berhasil, Pradipta dijadikan prasangka pemerkosaan anaknya
