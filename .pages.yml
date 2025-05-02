@@ -65,6 +65,9 @@ content:
       - name : synopsis
         label : Synopsis
         type : rich-text
+      - name : strength
+        label : Strength
+        type : rich-text
   - name : affiliation
     label : Affiliation
     type : collection
