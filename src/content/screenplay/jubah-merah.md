@@ -211,6 +211,10 @@ synopsis: >-
 
   Kapel kini kosong, umat menolaknya. David, terobsesi memanggil Hannah,
   akhirnya menggantung diri di bilik pengakuan, ditemukan Yakobus.
-strength: >-
-  ""
+strength: |-
+  Psychological Horror dengan struktur cerita dan setting unik.
+
+  Eksplorasi introspeksi diri dengan drama karakter piluh dan dalam.
+
+  Style dan estetik "Monster" baru ditumpu horror claustrophobic.
 ---
