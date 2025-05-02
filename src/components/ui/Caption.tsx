@@ -43,16 +43,16 @@ function CaptionSpan({word, duration, delay, colors}: {word:string, duration: nu
         }
     })
 
+
     return (
         <>
             <p
                 ref={scope}
                 className={`
                   hover:translate-y-1
-                  text-${colors.primary}
-                  hover:text-${colors.secondary} hover:bg-liber-red
+                  hover:text-liber-beige hover:bg-liber-red
                   active:bg-liber-red-3 cursor-none
-                  transition-all duration-100 tracking-tighter`}
+                  transition-all duration-100 tracking-tighter `}
                 style={{
                     opacity: 0,
                     filter: 'blur(20px)'
