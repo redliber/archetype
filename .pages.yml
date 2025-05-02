@@ -68,6 +68,30 @@ content:
       - name : strength
         label : Strength
         type : rich-text
+      - name : colors
+        label : Colors
+        type : object
+        fields :
+          - name : primary
+            label : Primary
+            type : string
+            default : 'liber-red'
+          - name : hover
+            label : Hover
+            type : string
+            default : 'liber-red-2'
+          - name : active
+            label : Active
+            type : string
+            default : 'liber-red-3'
+          - name : secondary
+            label : Secondary
+            type : string
+            default : 'liber-beige'
+          - name : accent
+            label : Accent
+            type : string
+            default : 'liber-brown'
   - name : affiliation
     label : Affiliation
     type : collection
