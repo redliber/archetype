@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function SideBar ({slug, sitePath} : {slug: string, sitePath?:string}) {
-    const content = ['premise', 'synopsis', 'strengths', 'characters']
+    const content = ['premise', 'synopsis', 'characters', 'strengths']
     const [useAffiliation, setAffiliation] = useState('')
 
     const [activeSection, setActiveSection] = useState('');
@@ -53,8 +53,8 @@ export default function SideBar ({slug, sitePath} : {slug: string, sitePath?:str
         <div className="
             text-lg
             flex flex-col
-            gap-1 text-right 
-            align-bottom justify-end 
+            gap-1 text-right
+            align-bottom justify-end
             h-full p-12">
                 <div className="my-10 py-10 font-black tracking-wide hover:text-liber-red-2 transition-all duration-150">
                     <a href={sitePath + useAffiliation.toLowerCase()}>{useAffiliation && useAffiliation}</a>
@@ -62,11 +62,11 @@ export default function SideBar ({slug, sitePath} : {slug: string, sitePath?:str
             {
                 content.map((item, index) => {
                     return (
-                        <div key={index} className={` 
+                        <div key={index} className={`
                             hover:font-black hover:translate-x-2
                             active:text-liber-brown
                             origin-right
-                            transition-all duration-200 
+                            transition-all duration-200
                             ` + (activeSection === item ? ` text-orange-100 font-black translate-x-2` : ` `)}>
                             <a
                                 href={`#${item}`}

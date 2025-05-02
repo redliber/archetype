@@ -13,9 +13,9 @@ import SectionFadeIn from '../../components/animation/SectionFadeIn';
 export async function getStaticPaths() {
     const screenplays = await getCollection('screenplay')
     const screenplaysPaths = screenplays.map((item) => ({
-        slug: item.slug, 
-        title: item.data.title, 
-        premise: item.data.premise, 
+        slug: item.slug,
+        title: item.data.title,
+        premise: item.data.premise,
         genre: item.data.genre,
         cover: item.data.cover,
         synopsis: item.data.synopsis
@@ -68,14 +68,14 @@ const absoluteUrl = new URL(newPath, siteOrigin).toString();
                 <Title client:load title={title}/>
                 <div class="w-full">
                     {
-                        cover && 
+                        cover &&
                         <img src={cover} class="w-full"/>
                     }
                 </div>
                 <div class="p-20">
                     <div class="flex flex-col gap-12 my-80">
-                        <div class="py-40">
-                            <div 
+                        <div class="py-40 my-96">
+                            <div
                                 id="premise"
                                 data-section-id="premise"
                                 >
@@ -84,29 +84,39 @@ const absoluteUrl = new URL(newPath, siteOrigin).toString();
                                 </SectionFadeIn> -->
                             </div>
                         </div>
-        
-        
-                        <div class="py-40">
-                            <div 
+
+
+                        <div class="py-40 my-96">
+                            <div
                                 id="synopsis"
                                 data-section-id="synopsis"
                                 >
                                 <Caption client:load text={premise}/>
                             </div>
                         </div>
-        
-                        <div class="py-40">
-                            <div 
+
+                        <div class="py-40 my-96">
+                            <div
+                                id="characters"
+                                data-section-id="characters"
+                                >
+                                <Caption client:load text={premise}/>
+                            </div>
+                        </div>
+
+                        <div class="py-40 my-96">
+                            <div
                                 id="strengths"
                                 data-section-id="strengths"
                                 >
                                 <Caption client:load text={premise}/>
                             </div>
                         </div>
-        
+
+
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </SectionFadeIn>
