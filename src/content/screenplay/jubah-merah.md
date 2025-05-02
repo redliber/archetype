@@ -4,7 +4,7 @@ premise: Seorang pastor gereja Katholik dihantui oleh sesosok iblis berbentuk
   jubah merah yang muncul setiap kali ia memberikan pengakuan dosa kepada
   umatnya. Iblis tersebut berjanji akan meninggalkannya dan gerejanya jika ia
   memberikan setetes darah umat yang paling berdosa dari gerejanya.
-cover: /src/content/media/ARCHETYPE-jubah-cover.png
+cover: /public/media/ARCHETYPE-jubah-cover.png
 genre:
   - Philosophy
   - Horror
@@ -26,6 +26,9 @@ synopsis: >-
   ![](/src/content/media/ARCHETYPE-jubah-01.png)
 
 
+  ![](/public/media/ARCHETYPE-jubah-01.png)
+
+
   Dalam bilik pengakuan, David memberikan penitensi pada umat. Suatu malam,
   pintu biliknya terkunci, dan sosok tinggi berjubah merah masuk. Jubah Merah,
   dengan suara mengerikan, mengaku dosa sambil mengungkap rahasia David dan
@@ -37,6 +40,9 @@ synopsis: >-
 
 
   ![](/src/content/media/ARCHETYPE-jubah-02.png)
+
+
+  ![](/public/media/ARCHETYPE-jubah-02.png)
 
 
   # Pendosa Terbesar
@@ -70,6 +76,9 @@ synopsis: >-
   terpesona pada Anastasia meskipun ia seorang Pastor.
 
 
+  ![](/public/media/ARCHETYPE-jubah-04.png)
+
+
   ![](/src/content/media/ARCHETYPE-jubah-03.png)
 
 
@@ -81,6 +90,9 @@ synopsis: >-
 
 
   ![](/src/content/media/ARCHETYPE-jubah-04.png)
+
+
+  ![](/public/media/ARCHETYPE-jubah-03.png)
 
 
   David, terpojok, mengaku pada Anastasia, istri Adam, bahwa ia sengaja membunuh
@@ -109,6 +121,9 @@ synopsis: >-
 
 
   ![](/src/content/media/ARCHETYPE-jubah-05.png)
+
+
+  ![](/public/media/ARCHETYPE-jubah-05.png)
 
 
   Hati berat dan rasa bersalah dosanya terlalu kuat, David menerima penitensi.
