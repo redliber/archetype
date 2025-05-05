@@ -12,7 +12,7 @@ genre:
   - Coming-of-age
   - Young Adult
 synopsis: >-
-  # **Helen**
+  # Helen
 
 
   Di kelas XII-C, Bu Esther mengajar sastra tentang keengganan remaja bertumbuh,
@@ -45,7 +45,7 @@ synopsis: >-
   untuk bertindak meski melihat Astrid setengah menangis.
 
 
-  # **Astrid**
+  # Astrid
 
 
   Helen diliputi rasa bersalah, tetapi tidak berani menghadapi Astrid, yang kini
@@ -92,7 +92,7 @@ synopsis: >-
   ![](/public/media/ARCHETYPE-daging-04.jpg)
 
 
-  # **Diaphan**
+  # Diaphan
 
 
   Helen menyelidiki sendiri dan menemukan peternakan yang kehilangan kambing,
