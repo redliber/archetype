@@ -61,7 +61,7 @@ export default function Title({title, colors}: {title: string, colors:any}) {
                     }}
                 >
                   <p
-                      className={`text-8xl font-black font-heading tracking-tighter w-full
+                      className={`text-8xl title font-black font-heading tracking-tighter w-full
                        active:scale-90
                       hover:scale-110
                       transition-all duration-300
