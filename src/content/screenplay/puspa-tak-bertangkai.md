@@ -104,6 +104,6 @@ colors:
   primary: "#284659"
   secondary: "#7AA5BF"
   accent: "#F2B66D"
-  neutral: "#EBBDB3"
+  neutral: "#FFF6F4"
   complementary: "#F2CF63"
 ---
