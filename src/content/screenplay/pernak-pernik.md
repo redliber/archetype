@@ -301,9 +301,9 @@ strength: >-
 
   "Now You See Me" versi Indonesia—dan lebih realistis.
 colors:
-  primary: "#49186A"
-  secondary: "#D0AAEA"
-  accent: "#713B95"
-  neutral: "#FBEEFF"
-  complementary: "#21A680"
+  primary: "#8C793E"
+  secondary: "#F2E394"
+  accent: "#0D0D0D"
+  neutral: "#F2F2F2"
+  complementary: "#F2DB66"
 ---
