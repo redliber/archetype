@@ -182,17 +182,17 @@ synopsis: >-
   # Kedatangan Nenek Perantau
 
 
-  **RAI** (15), seorang gadis yang gesit dan cerdik, hobi menilap berbagai
-  pernak-pernik kecil dan unik dengan justifikasi bahwa pemiliknya tidak akan
-  merasa kehilangan.
+  RAI, seorang gadis yang gesit dan cerdik, hobi menilap berbagai pernak-pernik
+  kecil dan unik dengan justifikasi bahwa pemiliknya tidak akan merasa
+  kehilangan.
 
 
   ![](/public/media/ARCHETYPE-pernak_pernik-02.png)
 
 
-  Di jalan pulang, ia dicari oleh **ARYA** (18), pria tampan dan santai yang ia
-  kagumi. Arya mengajaknya untuk nongkrong di Tirta Gangga sembari Rai libur
-  sekolah, namun Rai tahu bahwa Arya lebih tertarik menggoda turis bule.
+  Di jalan pulang, ia dicari oleh ARYA, pria tampan dan santai yang ia kagumi.
+  Arya mengajaknya untuk nongkrong di Tirta Gangga sembari Rai libur sekolah,
+  namun Rai tahu bahwa Arya lebih tertarik menggoda turis bule.
 
 
   ![](/public/media/ARCHETYPE-pernak_pernik-05.png)
@@ -201,9 +201,9 @@ synopsis: >-
   ![](/public/media/ARCHETYPE-pernak_pernik-06.png)
 
 
-  Di rumah, Rai dan ibunya, **MARINI** (33) bertemu dengan **MUKTI** (50),
-  neneknya yang baru muncul di hidupnya. Mukti memikat Rai dengan cerita tentang
-  perjalanannya, meskipun Rai merasakan ketegangan antara Mukti dan ibunya.
+  Di rumah, Rai dan ibunya, MARINI bertemu dengan MUKTI, neneknya yang baru
+  muncul di hidupnya. Mukti memikat Rai dengan cerita tentang perjalanannya,
+  meskipun Rai merasakan ketegangan antara Mukti dan ibunya.
 
 
   Malam itu, Mukti menemukan koleksi barang curian Rai yang disembunyikan,
@@ -222,13 +222,12 @@ synopsis: >-
 
 
   Seminggu kemudian, mereka memulai road trip untuk mengembalikan patung-patung
-  itu, dengan Rai juga berencana untuk mengembalikan pouch milik ayahnya,
-  **AGUNG** (36).
+  itu, dengan Rai juga berencana untuk mengembalikan pouch milik ayahnya, AGUNG.
 
 
   Arya ikut serta sekalian menumpang ke Tirta Gangga. Di perjalanan, mereka
-  bertemu dengan sepupu Rai, **DEVA** (24), di antara para demonstran politik
-  yang menentang politikus korup Wayan Trinada.
+  bertemu dengan sepupu Rai, DEVA, di antara para demonstran politik yang
+  menentang politikus korup Wayan Trinada.
 
 
   Rai berjuang melawan insting kleptonya dan berhasil mengembalikan dua dari
