@@ -134,31 +134,32 @@ function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors, gl
     <div className="w-full flex flex-col gap-32">
       <div
         ref={headingScope}
-        className="sticky top-0 px-20 py-10 opacity-0 origin-top-left
-        border-b-2
-        shadow-xl shadow-liber-red/10
+        className="
+        heading-section
+        sticky top-0 px-20 py-10 opacity-0 origin-top-left
+        shadow-xl
         flex flex-row gap-10
+        background
         z-[99]"
         style={{
           transform: 'translateY(200px)',
           scale: 1,
-          backgroundColor: 'var(--color-liber-beige)'
         }}
       >
         <div className="min-w-[2.5vw] h-full self-baseline">
-          <p className="
+          <span className="
               font-heading font-black pl-2
-              text-liber-brown text-lg">
+              text-lg">
             {
               index + 1 == total && `FINAL ACT`
             }
             {
               index + 1 != total && `ACT ${ index + 1 }`
             }
-          </p>
+          </span>
           <p
             ref={headingIntersectionRef}
-            className="text-8xl font-black font-heading text-left origin-top-left tracking-tighter
+            className="text-8xl font-black text-left origin-top-left tracking-tighter
             "
             style={{
               scale: useHeadingSize

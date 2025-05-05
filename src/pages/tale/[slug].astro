@@ -59,100 +59,155 @@ const coverPublicRemoved = 'archetype' + cover.replace('public/', '')
 
 const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
 
+const {neutral, primary, secondary, accent, complementary} = colors
+
 ---
 
 <Layout>
-    <SectionFadeIn client:load duration={3} delay={0.5}>
-        <div class="w-[100vw] h-[100vh] flex flex-row items-start">
-            <div class="w-[15%] h-full ">
-                <SectionFadeIn client:load duration={3} delay={4}>
-                    <div 
-                        class="fixed w-[15%] top-0 text-liber-beige h-full flex flex-col justify-between"
-                        style={{
-                            backgroundColor: colors.neutral
-                        }}
-                    >
-                        <div class="p-10 w-full text-right">
-                            <a href="/archetype" class="font-heading font-black hover:text-liber-red-2 transition-all duration-100 ease-in-out ">archetype</a>
-                        </div>
-                        <SideBar colors={colors} sitePath={absoluteUrl} slug={slug} client:load />
-                    </div>
-                </SectionFadeIn>
-            </div>
+    <div
+        class=" background"  
+    >
+        <SectionFadeIn client:load duration={3} delay={0.5}>
+            <div class="w-[100vw] h-[100vh] flex flex-row items-start">
 
-            <div class="w-[85%]">
-                <div class="p-20">
-                    <SectionFadeIn client:load delay={2.5} duration={3}>
-                        <div class="flex flex-col justify-end">
-                            {
-                                genre.map((item, index) => (
-                                    <p
-                                        class={` font-black text-2xl ` + `text-liber-red`}
-                                        >
-                                        {item}
-                                    </p>
-                                ))
-                            }
+
+                <div class="w-[15%] h-full ">
+                    <SectionFadeIn client:load duration={3} delay={4}>
+                        <div 
+                            class="fixed w-[15%] top-0  h-full flex flex-col justify-between sidebar"
+                        >
+                            <div class="p-10 w-full text-right">
+                                <a 
+                                    href="/archetype" 
+                                    class="font-heading font-black transition-all duration-100 ease-in-out sidebar"
+                                    >archetype</a>
+                            </div>
+                            <SideBar colors={colors} sitePath={absoluteUrl} slug={slug} client:load />
                         </div>
                     </SectionFadeIn>
                 </div>
-                <Title client:load title={title} colors={colors}/>
-                <div class="w-full">
-                    {
-                        newCoverImgPath &&
-                        <img src={newCoverImgPath} class="w-full"/>
-                    }
+    
+                <div class="w-[85%] background"  >
+                    <div class="p-20">
+                        <SectionFadeIn client:load delay={2.5} duration={3}>
+                            <div class="flex flex-col justify-end">
+                                {
+                                    genre.map((item, index) => (
+                                        <p
+                                            class={` font-black text-2xl `}
+                                            >
+                                            {item}
+                                        </p>
+                                    ))
+                                }
+                            </div>
+                        </SectionFadeIn>
+                    </div>
+                    
+                    <Title client:load title={title} colors={colors}/>
+                    <div class="w-full">
+                        {
+                            newCoverImgPath &&
+                            <img src={newCoverImgPath} class="w-full"/>
+                        }
+                    </div>
+                    <div class="flex flex-col gap-12">
+    
+    
+                        <div class="py-24 mb-96 px-20">
+                            <div
+                                id="premise"
+                                data-section-id="premise"
+                                >
+                                <Caption colors={colors} className={`text-8xl text-liber-red `} client:load text={premise}/>
+                            </div>
+                        </div>
+    
+    
+                        <div class="py-40 my-96">
+                            <div
+                                id="synopsis"
+                                data-section-id="synopsis"
+                                >
+                                    <Synopsis
+                                        client:load
+                                        colors={colors}
+                                        siteOrigin={siteOrigin}
+                                        synopsis={synopsisArray}/>
+                            </div>
+                        </div>
+    
+    
+                        <div class="px-24">
+                            <Caption
+                                colors={colors}
+                                text='fade out.'
+                                duration={0.5}
+                                client:load className="text-9xl"/>
+                        </div>
+    
+    
+                        <div class="pt-40 mt-96">
+                            <div
+                                id="strength"
+                                data-section-id="strength"
+                                >
+                                    <Strength
+                                        client:load
+                                        colors={colors}
+                                        strength={strengthArray}/>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-                <div class="flex flex-col gap-12">
-
-
-                    <div class="py-24 mb-96 px-20">
-                        <div
-                            id="premise"
-                            data-section-id="premise"
-                            >
-                            <Caption colors={colors} className={`text-8xl text-liber-red `} client:load text={premise}/>
-                        </div>
-                    </div>
-
-
-                    <div class="py-40 my-96">
-                        <div
-                            id="synopsis"
-                            data-section-id="synopsis"
-                            >
-                                <Synopsis
-                                    client:load
-                                    colors={colors}
-                                    siteOrigin={siteOrigin}
-                                    synopsis={synopsisArray}/>
-                        </div>
-                    </div>
-
-
-                    <div class="px-24">
-                        <Caption
-                            colors={colors}
-                            text='fade out.'
-                            duration={0.5}
-                            client:load className="text-9xl"/>
-                    </div>
-
-
-                    <div class="pt-40 mt-96">
-                        <div
-                            id="strength"
-                            data-section-id="strength"
-                            >
-                                <Strength
-                                    client:load
-                                    colors={colors}
-                                    strength={strengthArray}/>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </SectionFadeIn>
+        </SectionFadeIn>
+    </div>
 </Layout>
+
+<style is:global define:vars={{neutral, primary, complementary, secondary, accent}}>
+    .background {
+        background-color: var(--neutral);
+    }
+
+    .sidebar {
+        background-color: var(--primary);
+        color: var(--neutral);
+    }
+    .sidebar:hover {
+        color: var(--complementary)
+    }
+
+    p,a {
+        color: var(--primary);
+    }
+    
+    p,a:hover {
+        color: var(--accent);
+    }
+
+    .caption {
+        color: var(--accent);
+    }
+    
+    .caption:hover {
+        color: var(--neutral);
+        background-color: var(--complementary);
+    }
+    .caption:active {
+        color: var(--complementary);
+        background-color: var(--secondary);
+    }
+
+    .heading-section {
+        border-bottom-width: 2px;
+        border-bottom-color: var(--primary);
+        /* box-shadow: var(--primary); */
+    }
+
+    span {
+        color: var(--complementary)
+    }
+
+</style>

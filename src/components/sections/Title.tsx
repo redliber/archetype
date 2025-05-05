@@ -47,7 +47,7 @@ export default function Title({title, colors}: {title: string, colors:any}) {
             <div className="h-[25vh]"></div>
             <div
                 ref={introScope}
-                className="sticky top-0 py-12 justify-items-end px-24 z-[1000]"
+                className="sticky top-0 py-12 justify-items-end px-24 z-[1000] "
                 style={{
                     opacity: 0,
                     filter: 'blur(30px)'
@@ -62,10 +62,8 @@ export default function Title({title, colors}: {title: string, colors:any}) {
                 >
                   <p
                       className={`text-8xl font-black font-heading tracking-tighter w-full
-                      text-liber-red
-                      hover:text-liber-red-2
-                      active:text-liber-red-3 active:scale-90
-                      hover:scale-125 hover:rotate-12
+                       active:scale-90
+                      hover:scale-110
                       transition-all duration-300
                       `}>{title}
                   </p>

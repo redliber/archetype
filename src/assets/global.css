@@ -15,7 +15,7 @@ html {
   @apply text-liber-red;
   @apply transition-all;
   @apply duration-300;
-  @apply bg-liber-beige;
+  /* @apply bg-liber-beige; */
   @apply tracking-[0.01em];
   scroll-behavior: smooth;
   font-family: 'Plus Jakarta Sans Variable', 'sans-serif';

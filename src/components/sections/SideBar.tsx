@@ -56,23 +56,23 @@ export default function SideBar({ slug, sitePath, colors }: { slug: string, site
             gap-1 text-right
             align-bottom justify-end
             h-full p-12">
-                <div className="my-10 py-10 font-black tracking-wide hover:text-liber-red-2 transition-all duration-150">
-                    <a href={sitePath + useAffiliation.toLowerCase()}>{useAffiliation && useAffiliation}</a>
+                <div className="my-10 py-10 font-black tracking-wide transition-all duration-150">
+                    <a className="sidebar" href={sitePath + useAffiliation.toLowerCase()}>{useAffiliation && useAffiliation}</a>
                 </div>
             {
                 content.map((item, index) => {
                     return (
                         <div key={index} className={`
-                            hover:font-black hover:translate-x-2
-                            active:text-liber-brown
+                            hover:translate-x-2
                             origin-right
                             font-heading
                             transition-all duration-200
-                            ` + (activeSection === item ? ` text-orange-100 font-black translate-x-2` : ` `)}>
+                            ` + (activeSection === item ? `  translate-x-2 font-semibold` : ` `)}>
                             <a
                                 href={`#${item}`}
                                 data-section-id={`#${item}`}
                                 className="
+                                    sidebar
                                     nav-link
                                     "
                                 >{item.toUpperCase()}</a>

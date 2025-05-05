@@ -101,9 +101,9 @@ strength: >-
   Membantu menyebar awareness tentang cinta yang ikhlas dan bedanya hidup
   memilikki Cerebral Palsy.
 colors:
-  primary: #49186A
-  secondary: #D0AAEA
-  accent: #713B95
-  neutral: #280440
-  complementary: #21A680
+  primary: "#49186A"
+  secondary: "#D0AAEA"
+  accent: "#713B95"
+  neutral: "#FBEEFF"
+  complementary: "#21A680"
 ---

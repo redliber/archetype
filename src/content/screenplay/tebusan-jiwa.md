@@ -191,9 +191,9 @@ strength: >-
   Komedi karakter berwarna, realita topik asuransi dan kesehatan, serta
   kepedihan dunia perjudian.
 colors:
-  primary: #49186A
-  secondary: #D0AAEA
-  accent: #713B95
-  neutral: #280440
-  complementary: #21A680
+  primary: "#49186A"
+  secondary: "#D0AAEA"
+  accent: "#713B95"
+  neutral: "#FBEEFF"
+  complementary: "#21A680"
 ---
