@@ -6,4 +6,5 @@ screenplay:
   - Tape No.4
   - Puspa tak Bertangkai
   - Tebusan Jiwa
+  - Dirayakan Ombak
 ---
