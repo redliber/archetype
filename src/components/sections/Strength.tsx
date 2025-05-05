@@ -8,7 +8,9 @@ export default function Strength({strength, colors}: {strength:string[], colors:
     <div className="flex flex-col gap-20 p-20 bg-liber-red ">
       {
         strength.map((item, index) => (
-          <div className="mt-24">
+          <div
+            key={index} 
+            className="mt-24">
             <Caption
               colors={colors}
               className='text-8xl text-liber-beige ' text={item}/>

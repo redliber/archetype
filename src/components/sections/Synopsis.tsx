@@ -24,7 +24,10 @@ export default function Synopsis({ synopsis, siteOrigin, colors }: { synopsis: {
       {
         synopsis.map((item, index) => {
           return (
-            <div className="my-[50vh]">
+            <div
+              className="my-[50vh]"
+              key={index}
+              >
               <SynopsisSection
                 colors={colors}
                 siteOrigin={siteOrigin} 
@@ -173,7 +176,9 @@ function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors, gl
               const absoluteUrl = new URL(src, siteOrigin).toString();
               // console.log('Image ==> ', absoluteUrl)
               return (
-                <div id={`section-${GLOBAL_INDEX}`} className="py-[35vh] flex flex-col">
+                <div
+                  key={index} 
+                  id={`section-${GLOBAL_INDEX}`} className="py-[35vh] flex flex-col">
                   {/* <p>SECTION - {GLOBAL_INDEX}</p> */}
                   <a className="text-2xl font-black font-heading sticky z-0 top-[30vh] px-20 py-20" href={`#section-${GLOBAL_INDEX - 1}`}>↑</a>
                   <img src={ absoluteUrl } className="w-full"/>
@@ -182,7 +187,9 @@ function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors, gl
               )
             }
             return (
-              <div className="py-[35vh] px-20 flex flex-col gap-36" id={`section-${GLOBAL_INDEX}`}>
+              <div
+                key={index}  
+                className="py-[35vh] px-20 flex flex-col gap-36" id={`section-${GLOBAL_INDEX}`}>
                 {
                   (GLOBAL_INDEX > 0) && (
                     <a className="text-2xl font-black font-heading sticky z-0 top-[35vh] pb-2" href={`#section-${GLOBAL_INDEX - 1}`}>↑</a>

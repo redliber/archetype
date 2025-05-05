@@ -10,15 +10,17 @@ export default function Caption({text, duration = 2, delay = 0.5, className, col
   return (
     <div className={` flex flex-wrap font-bold  ` + fontSettings}>
             {
-                textArr.map((item) => {
+                textArr.map((item, index) => {
                     if (item === " ") {
                         return (
-                            <><p>&nbsp;</p></>
+                            <><p key={index}>&nbsp;</p></>
                         )
                     }
 
                     return (
-                        <CaptionSpan duration={duration} delay={delay} word={item} colors={colors}/>
+                        <CaptionSpan
+                            key={index}  
+                            duration={duration} delay={delay} word={item} colors={colors}/>
                     )
                 })
             }

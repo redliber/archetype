@@ -117,7 +117,9 @@ export default function Card({title, genres, index, link} : {title: string, genr
                     {
                         genres?.map((genre) => {
                             return (
-                                <p className="">{genre.toLowerCase()}</p>
+                                <p
+                                    key={index} 
+                                    className="">{genre.toLowerCase()}</p>
                             )
                         })
                     }

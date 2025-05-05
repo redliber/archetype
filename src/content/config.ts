@@ -12,10 +12,10 @@ const screenplayCollection = defineCollection({
     strength: z.string(),
     colors: z.object({
       primary: z.string(),
-      hover: z.string(),
-      active: z.string(),
       secondary: z.string(),
       accent: z.string(),
+      complementary: z.string(),
+      neutral: z.string(),
     })
   }),
 });

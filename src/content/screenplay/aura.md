@@ -108,9 +108,9 @@ strength: >-
 
   Market romance thriller yang mulai merajarela.
 colors:
-  primary: violet-600
-  hover: violet-800
-  active: violet-950
-  secondary: violet-300
-  accent: slate-950
+  primary: 49186A
+  secondary: D0AAEA
+  accent: 713B95
+  neutral: 280440
+  complementary: 21A680
 ---

@@ -101,9 +101,9 @@ strength: >-
   Membantu menyebar awareness tentang cinta yang ikhlas dan bedanya hidup
   memilikki Cerebral Palsy.
 colors:
-  primary: liber-red
-  hover: liber-red-2
-  active: liber-red-3
-  secondary: liber-beige
-  accent: liber-brown
+  primary: #49186A
+  secondary: #D0AAEA
+  accent: #713B95
+  neutral: #280440
+  complementary: #21A680
 ---
