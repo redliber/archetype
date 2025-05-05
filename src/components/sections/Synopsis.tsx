@@ -7,6 +7,18 @@ import { useIntersectionObserver, useWindowScroll, useWindowSize } from "@uidotd
 import { lerp, scaleValue } from "../../utils/kit"
 
 export default function Synopsis({ synopsis, siteOrigin, colors }: { synopsis: {heading: string, body: string[]}[], siteOrigin:any, colors:any }) {
+
+  const ACTS_AMOUNT = synopsis.length
+  const SECTIONS_AMOUNTS:number[] = []
+  synopsis.forEach((item, index) => {
+    if (index > 0) {
+      SECTIONS_AMOUNTS.push(item.body.length + SECTIONS_AMOUNTS[index-1])
+    }
+    else {
+      SECTIONS_AMOUNTS.push(item.body.length)
+    }
+  })
+
   return (
     <div className="w-full">
       {
@@ -15,7 +27,12 @@ export default function Synopsis({ synopsis, siteOrigin, colors }: { synopsis: {
             <div className="my-[50vh]">
               <SynopsisSection
                 colors={colors}
-                siteOrigin={siteOrigin} total={ synopsis.length } index={index} synopsisSection={item}/>
+                siteOrigin={siteOrigin} 
+                total={ synopsis.length } 
+                index={index}
+                length={SECTIONS_AMOUNTS[ACTS_AMOUNT-1]}
+                globalIndex={SECTIONS_AMOUNTS[index-1]}
+                synopsisSection={item}/>
             </div>
           )
         })
@@ -24,7 +41,7 @@ export default function Synopsis({ synopsis, siteOrigin, colors }: { synopsis: {
   )
 }
 
-function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors }: { synopsisSection: { heading: string, body: string[] }, index: number, total: number, siteOrigin: any, colors:any }) {
+function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors, globalIndex, length }: { synopsisSection: { heading: string, body: string[] }, index: number, total: number, siteOrigin: any, colors:any, globalIndex:number, length:number }) {
   const {heading, body} = synopsisSection
 
   const [headingScope, headingAnimate] = useAnimate()
@@ -149,19 +166,37 @@ function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors }: 
       <div className="">
         {
           body.map((item, index) => {
+            const GLOBAL_INDEX = (globalIndex ? globalIndex : 0)  + index
+
             if (item[0] === '!') {
               const src = 'archetype' + item.slice(4, item.length-1).replace('public/', '')
               const absoluteUrl = new URL(src, siteOrigin).toString();
               // console.log('Image ==> ', absoluteUrl)
               return (
-                <img src={ absoluteUrl } className="w-full"/>
+                <div id={`section-${GLOBAL_INDEX}`} className="py-[35vh] flex flex-col">
+                  {/* <p>SECTION - {GLOBAL_INDEX}</p> */}
+                  <a className="text-2xl font-black font-heading sticky z-0 top-[30vh] px-20 py-20" href={`#section-${GLOBAL_INDEX - 1}`}>↑</a>
+                  <img src={ absoluteUrl } className="w-full"/>
+                  <a className="text-2xl font-black font-heading sticky z-0 bottom-0 px-20 py-20" href={`#section-${GLOBAL_INDEX + 1}`}>↓</a>
+                </div>
               )
             }
             return (
-              <div className="py-64 px-20">
+              <div className="py-[35vh] px-20 flex flex-col gap-36" id={`section-${GLOBAL_INDEX}`}>
+                {
+                  (GLOBAL_INDEX > 0) && (
+                    <a className="text-2xl font-black font-heading sticky z-0 top-[35vh] pb-2" href={`#section-${GLOBAL_INDEX - 1}`}>↑</a>
+                  )
+                }
                 <Caption
                   colors={colors}
                   duration={1.5} text={item }/>
+                  {/* <p>{length}</p> */}
+                {
+                  GLOBAL_INDEX !== (length-1) && (
+                    <a className="text-2xl font-black font-heading sticky z-0 bottom-0 pb-2" href={`#section-${GLOBAL_INDEX + 1}`}>↓</a>
+                  )
+                }
               </div>
             )
           })
