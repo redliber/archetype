@@ -244,7 +244,7 @@ strength: >-
 
   100 tahun sakit atau 1 tahun sehat?
 colors:
-  primary: "#201F40"
+  primary: "#46456A"
   secondary: "#D9CA7E"
   accent: "#BFAE7A"
   neutral: "#0B0D0C"
