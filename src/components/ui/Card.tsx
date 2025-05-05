@@ -3,7 +3,7 @@
 import { useAnimate } from "framer-motion"
 import { ArrowRightFromLine } from "lucide-react"
 
-export default function Card({title, genres, index, link} : {title: string, genres?: string[], index: number, link: string}) {
+export default function Card({title, genres, index, link, colors} : {title: string, genres?: string[], index: number, link: string, colors:any}) {
     const [scope, animate] = useAnimate()
     const [genresRef, genresAnimate] = useAnimate()
     const [titleRef, titleAnimate] = useAnimate()
@@ -11,8 +11,8 @@ export default function Card({title, genres, index, link} : {title: string, genr
 
     function handleHover() {
         animate(scope.current, {
-            background: 'var(--color-liber-red)',
-            color: 'var(--color-liber-beige)',
+            background: colors.accent,
+            color: colors.neutral,
             scale: 1.25,
             rotate: Math.random() * 20 * (Math.random() > 0.5 ? -1 : 1)
         }, {
@@ -30,7 +30,7 @@ export default function Card({title, genres, index, link} : {title: string, genr
 
         titleAnimate(titleRef.current, {
             scale: 0.25,
-            color: 'var(--color-black)'
+            color: colors.secondary
         }, {
             duration: 0.25,
             type: 'spring'
@@ -47,8 +47,8 @@ export default function Card({title, genres, index, link} : {title: string, genr
 
     function handleLeave() {
         animate(scope.current, {
-            background: 'var(--color-liber-beige)',
-            color: 'var(--color-liber-red)',
+            background: colors.primary,
+            color: colors.accent,
             scale: 1,
             rotate: 0
         }, {
@@ -66,7 +66,7 @@ export default function Card({title, genres, index, link} : {title: string, genr
 
         titleAnimate(titleRef.current, {
             scale: 1,
-            color: 'var(--color-liber-red)',
+            color: colors.neutral,
 
         }, {
             duration: 0.25,
@@ -86,24 +86,33 @@ export default function Card({title, genres, index, link} : {title: string, genr
     return (
         <div
             ref={scope}
+            style={{
+                backgroundColor: colors.primary
+            }}
             onMouseEnter={handleHover}
             onMouseLeave={handleLeave}
             className={`
             border-[1px] border-liber-red rounded-sm
             p-10
             w-2xl min-h-[60vh]
-            shadow-2xl shadow-liber-red/50
+            shadow-2xl
             flex flex-col justify-between
-            bg-liber-beige font-heading
+            font-heading
             ` + `z-[${100+index}]`}>
                 <div
                     ref={enterRef}
-                    className="text-right place-self-end rounded-sm opacity-0 bg-liber-beige font-black text-liber-red  hover:scale-125 transition-all duration-200 p-2">
+                    style={{
+                        color: colors.primary
+                    }}
+                    className="text-right place-self-end rounded-sm opacity-0 bg-liber-beige font-black  hover:scale-125 transition-all duration-200 p-2">
                     <a href={link}>→ &nbsp; ENTER</a>
                 </div>
                 <div className="my-4 flex flex-row justify-between w-full">
                     <p
                         ref={titleRef}
+                        style={{
+                            color: colors.neutral
+                        }}
                         className="text-8xl font-black tracking-tighter origin-top-right w-full">{title}
                     </p>
                 </div>

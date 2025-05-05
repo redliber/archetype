@@ -45,24 +45,29 @@ const siteOrigin = Astro.url.origin
                     <p class="text-xl text-md text-center font-black font-heading text-liber-brown">{title}</p>
                 </SectionFadeIn>
             </div>
-        <div class="flex flex-wrap gap-12 my-32">
+        <div class="flex flex-wrap gap-12 my-32 justify-center">
             {
                 screenplayArrMapped && screenplayArrMapped.map((item, index) => {
                     const newPath = `archetype/tale/${item.slug}`
                     const absoluteUrl = new URL(newPath, siteOrigin).toString();
 
+                    console.log(`Colors in Cards ${item.colors}`)
+
                     return (
-                        <SectionFadeIn
-                            duration={3}
-                            delay={5}
-                            client:load>
-                            <Card client:load
-                                link={absoluteUrl}
-                                index={index}
-                                title={item.title}
-                                genres={item.genre}
-                                />
-                        </SectionFadeIn>
+                        <div>
+                            <SectionFadeIn
+                                duration={3}
+                                delay={5}
+                                client:load>
+                                    <Card client:load
+                                        colors={item.colors}
+                                        link={absoluteUrl}
+                                        index={index}
+                                        title={item.title}
+                                        genres={item.genre}
+                                        />
+                            </SectionFadeIn>
+                        </div>
                     )
                 })
             }
