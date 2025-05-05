@@ -37,6 +37,7 @@ export async function getStaticPaths() {
 const { screenplay } = Astro.props;
 const { slug } = Astro.params;
 const { title, premise, genre, synopsis, cover, strength, colors} = screenplay
+console.log(title, ' Colors ==> ', colors)
 
 const siteOrigin = Astro.url.origin
 const newPath = `archetype/affiliation/`
@@ -58,7 +59,6 @@ const coverPublicRemoved = 'archetype' + cover.replace('public/', '')
 
 const newCoverImgPath = new URL(coverPublicRemoved, siteOrigin).toString()
 
-console.log(title, ' Colors ==> ', colors)
 ---
 
 <Layout>

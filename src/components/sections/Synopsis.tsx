@@ -178,7 +178,8 @@ function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors, gl
               return (
                 <div
                   key={index} 
-                  id={`section-${GLOBAL_INDEX}`} className="py-[35vh] flex flex-col">
+                  id={`section-${GLOBAL_INDEX}`} className="py-[35vh] flex flex-col"
+                >
                   {/* <p>SECTION - {GLOBAL_INDEX}</p> */}
                   <a className="text-2xl font-black font-heading sticky z-0 top-[30vh] px-20 py-20" href={`#section-${GLOBAL_INDEX - 1}`}>↑</a>
                   <img src={ absoluteUrl } className="w-full"/>
@@ -190,20 +191,20 @@ function SynopsisSection({ total, synopsisSection, index, siteOrigin, colors, gl
               <div
                 key={index}  
                 className="py-[35vh] px-20 flex flex-col gap-36" id={`section-${GLOBAL_INDEX}`}>
-                {
-                  (GLOBAL_INDEX > 0) && (
-                    <a className="text-2xl font-black font-heading sticky z-0 top-[35vh] pb-2" href={`#section-${GLOBAL_INDEX - 1}`}>↑</a>
-                  )
-                }
-                <Caption
-                  colors={colors}
-                  duration={1.5} text={item }/>
-                  {/* <p>{length}</p> */}
-                {
-                  GLOBAL_INDEX !== (length-1) && (
-                    <a className="text-2xl font-black font-heading sticky z-0 bottom-0 pb-2" href={`#section-${GLOBAL_INDEX + 1}`}>↓</a>
-                  )
-                }
+                  {
+                    (GLOBAL_INDEX > 0) && (
+                      <a className="text-2xl font-black font-heading sticky z-0 top-[35vh] pb-2" href={`#section-${GLOBAL_INDEX - 1}`}>↑</a>
+                    )
+                  }
+                  <Caption
+                    colors={colors}
+                    duration={1.5} text={item }/>
+                    {/* <p>{length}</p> */}
+                  {
+                    GLOBAL_INDEX !== (length-1) && (
+                      <a className="text-2xl font-black font-heading sticky z-0 bottom-0 pb-2" href={`#section-${GLOBAL_INDEX + 1}`}>↓</a>
+                    )
+                  }
               </div>
             )
           })

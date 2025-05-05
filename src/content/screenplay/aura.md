@@ -108,9 +108,9 @@ strength: >-
 
   Market romance thriller yang mulai merajarela.
 colors:
-  primary: 49186A
+  primary: abc
   secondary: D0AAEA
   accent: 713B95
-  neutral: 280440
+  neutral: a
   complementary: 21A680
 ---
