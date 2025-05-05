@@ -156,9 +156,9 @@ strength: |-
 
   Setting perkapalan yang sinematik dan menyentuh insting kebebasan.
 colors:
-  primary: "#49186A"
-  secondary: "#D0AAEA"
-  accent: "#713B95"
-  neutral: "#FBEEFF"
-  complementary: "#21A680"
+  primary: "#10454F"
+  secondary: "#506266"
+  accent: "#818274"
+  neutral: "#F4FFDD"
+  complementary: "#BDE038"
 ---
