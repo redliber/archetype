@@ -76,14 +76,6 @@ content:
             label : Primary
             type : string
             default : 'liber-red'
-          - name : hover
-            label : Hover
-            type : string
-            default : 'liber-red-2'
-          - name : active
-            label : Active
-            type : string
-            default : 'liber-red-3'
           - name : secondary
             label : Secondary
             type : string
@@ -92,6 +84,14 @@ content:
             label : Accent
             type : string
             default : 'liber-brown'
+          - name : neutral
+            label : Neutral
+            type : string
+            default : 'liber-red-2'
+          - name : complementary
+            label : Complementary
+            type : string
+            default : 'liber-red-3'
   - name : affiliation
     label : Affiliation
     type : collection
