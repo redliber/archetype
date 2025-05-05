@@ -220,9 +220,9 @@ strength: |-
 
   A24 versi Indonesia.
 colors:
-  primary: "#49186A"
-  secondary: "#D0AAEA"
-  accent: "#713B95"
-  neutral: "#FBEEFF"
-  complementary: "#21A680"
+  primary: "#BF0413"
+  secondary: "#BF454F"
+  accent: "#A60303"
+  neutral: "#F2F2F2"
+  complementary: "#D98989"
 ---
