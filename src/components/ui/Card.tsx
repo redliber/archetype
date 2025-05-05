@@ -11,7 +11,7 @@ export default function Card({title, genres, index, link, colors} : {title: stri
 
     function handleHover() {
         animate(scope.current, {
-            background: colors.accent,
+            background: colors.complementary,
             color: colors.neutral,
             scale: 1.25,
             rotate: Math.random() * 20 * (Math.random() > 0.5 ? -1 : 1)
@@ -66,7 +66,7 @@ export default function Card({title, genres, index, link, colors} : {title: stri
 
         titleAnimate(titleRef.current, {
             scale: 1,
-            color: colors.neutral,
+            color: colors.complementary,
 
         }, {
             duration: 0.25,
@@ -87,12 +87,13 @@ export default function Card({title, genres, index, link, colors} : {title: stri
         <div
             ref={scope}
             style={{
-                backgroundColor: colors.primary
+                backgroundColor: colors.primary,
+                borderColor: colors.complementary
             }}
             onMouseEnter={handleHover}
             onMouseLeave={handleLeave}
             className={`
-            border-[1px] border-liber-red rounded-sm
+            border-[1px]  rounded-sm
             p-10
             w-2xl min-h-[60vh]
             shadow-2xl
@@ -111,7 +112,7 @@ export default function Card({title, genres, index, link, colors} : {title: stri
                     <p
                         ref={titleRef}
                         style={{
-                            color: colors.neutral
+                            color: colors.complementary
                         }}
                         className="text-8xl font-black tracking-tighter origin-top-right w-full">{title}
                     </p>
